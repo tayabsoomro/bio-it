@@ -1,7 +1,6 @@
 
 #renderCanvas {
     width: 70%;
-    margin-left: 15%;
     touch-action: none;
     border: 1px solid black;
 }
