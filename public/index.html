@@ -1,10 +1,12 @@
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" href="http://homepage.usask.ca/~mts066/includes/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./css/master.css">
-        <title>BMSC 200 - Interactive</title>
+        <link rel="stylesheet" href="/css/vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/master.css">
+        <link rel="stylesheet" href="/css/proteins.css">
+        <title>Interactive Biomolecule Visualizer</title>
         <!-- Babylon.js -->
         <script src="https://www.babylonjs.com/hand.minified-1.2.js"></script>
         <script src="https://preview.babylonjs.com/babylon.js"></script>
@@ -18,386 +20,66 @@
     </head>
     <body>
       <div class="container">
-        <div class="col-lg-12">
+        <div class="col-lg-16">
           <h3 class="text-center">Interactive Biomolecule Visualizer</h3>
           <p class="text-center">Soomro T<sup>1</sup>, Ahmed R<sup>2</sup></p>
-          <p class="text-center"><sup>1</sup>Deartpment of Bioinformatics, University of Saskatchewan</p>
+          <p class="text-center"><sup>1</sup>Deartpment of Computer Science, University of Saskatchewan</p>
           <p class="text-center"><sup>2</sup>Departments of Physiology & Pharmacology, University of Saskatchewan</p>
           <br />
-          <div class="bs-example">
-            <div class="panel-group" id="accordion">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">1. Water</a>
-                  </h4>
-                </div>
-                <div id="collapseOne" class="panel-collapse collapse in">
-                  <div class="panel-body">
-                    <div class="panel-group" id="sub-acc-1">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#sub-acc-1" href="#collapseOneOne">Hydrogen Bonding (Water)</a>
-                          </h4>
-                        </div>
-                        <div id="collapseOneOne" class="panel-collapse collapse in">
-                          <div class="panel-body">
-                            <canvas id="renderCanvas"></canvas>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#sub-acc-1" href="#collapseOneTwo">Amphipathic Behaviour</a>
-                          </h4>
-                        </div>
-                        <div id="collapseOneTwo" class="panel-collapse collapse">
-                          <div class="panel-body">
-                            <p class="lead">Visualizing Amphipathic Behaviour...</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">2. Amino Acids</a>
-                  </h4>
-                </div>
-                <div id="collapseTwo" class="panel-collapse collapse">
-                  <div class="panel-body">
-                    <div class="panel-group" id="sub-acc-2">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#sub-acc-2">Peptide Chain</a>
-                          </h4>
-                        </div>
-                        <div id="collapseTwoOne" class="panel-collapse collapse in">
-                          <div class="panel-body">
-                            <p class="lead">Visualizing Interactive Peptide Chain...</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">3. Proteins</a>
-                  </h4>
-                </div>
-                <div id="collapseThree" class="panel-collapse collapse">
-                  <div class="panel-body">
-                    <div class="panel-group" id="sub-acc-3">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#sub-acc-3" href="#collapseThreeTwo">&alpha;-Helix</a>
-                          </h4>
-                        </div>
-                        <div id="collapseThreeTwo" class="panel-collapse collapse">
-                          <div class="panel-body">
-                            <p class="lead">Visualization of Alpha-Helicies</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#sub-acc-3" href="#collapseThreeThree">&beta;-Sheets</a>
-                          </h4>
-                        </div>
-                        <div id="collapseThreeThree" class="panel-collapse collapse">
-                          <div class="panel-body">
-                            <p class="lead">Visualization of Beta-Sheets</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#sub-acc-3" href="#collapseThreeFive">Fibrous Proteins</a>
-                          </h4>
-                        </div>
-                        <div id="collapseThreeFive" class="panel-collapse collapse">
-                          <div class="panel-body">
-                            <div class="panel-group" id="sub-acc-3-1">
-                              <div class="panel panel-default">
-                                <div class="panel-heading">
-                                  <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#sub-acc-3-1" href="#collapseThreeFiveOne">Keratin</a>
-                                  </h4>
-                                </div>
-                                <div id="collapseThreeFiveOne" class="panel-collapse collapse">
-                                  <div class="panel-body">
-                                    <p class="lead">Visualization of Keratin</p>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="panel panel-default">
-                                <div class="panel-heading">
-                                  <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#sub-acc-3-1" href="#collapseThreeFiveTwo">Collagen</a>
-                                  </h4>
-                                </div>
-                                <div id="collapseThreeFiveTwo" class="panel-collapse collapse">
-                                  <div class="panel-body">
-                                    <p class="lead">Visualization of Collagen</p>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="panel panel-default">
-                                <div class="panel-heading">
-                                  <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#sub-acc-3-1" href="#collapseThreeFiveThree">Silk</a>
-                                  </h4>
-                                </div>
-                                <div id="collapseThreeFiveThree" class="panel-collapse collapse">
-                                  <div class="panel-body">
-                                    <p class="lead">Visualization of Slik</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#sub-acc-3" href="#collapseThreeSix">Globular Proteins</a>
-                          </h4>
-                        </div>
-                        <div id="collapseThreeSix" class="panel-collapse collapse">
-                          <div class="panel-body">
-                            <div class="panel-group" id="sub-acc-3-2">
-                              <div class="panel panel-default">
-                                <div class="panel-heading">
-                                  <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#sub-acc-3-2" href="#collapseThreeSixOne">Myoglobin</a>
-                                  </h4>
-                                </div>
-                                <div id="collapseThreeSixOne" class="panel-collapse collapse">
-                                  <div class="panel-body">
-                                    <p class="lead">Visualization of Myoglobin</p>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="panel panel-default">
-                                <div class="panel-heading">
-                                  <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#sub-acc-3-2" href="#collapseThreeSixTwo">Hemoglobin</a>
-                                  </h4>
-                                </div>
-                                <div id="collapseThreeSixTwo" class="panel-collapse collapse">
-                                  <div class="panel-body">
-                                    <p class="lead">Visualization of Hemoglobin</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#sub-acc-3" href="#collapseThreeSeven">Oxygen Delivery</a>
-                          </h4>
-                        </div>
-                        <div id="collapseThreeSeven" class="panel-collapse collapse">
-                          <div class="panel-body">
-                            How does oxygen get delivered to lungs.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">4. Lipids</a>
-                  </h4>
-                </div>
-                <div id="collapseFour" class="panel-collapse collapse">
-                  <div class="panel-body">
-                    <div class="panel-group" id="sub-acc-4">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#sub-acc-4">Fluid Mosiac of Membrane</a>
-                          </h4>
-                        </div>
-                        <div id="collapseFourOne" class="panel-collapse collapse in">
-                          <div class="panel-body">
-                            <p class="lead">Visualization of fluid mosiac of membrane</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <canvas id="renderCanvas"></canvas>
         </div>
       </div>
-      <script>
-          var canvas = document.getElementById("renderCanvas");
-          var engine = new BABYLON.Engine(canvas, true);
+      <footer class="footer text-center">
+      <div class="container text-center">
+        <p class="text-muted text-center">
+          <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    1. Water <span class="caret caret-up"></span>
+                </button>
+                <ul class="dropdown-menu drop-up" role="menu">
+                    <li><a href="#">Hydrogen Bonding (Water)</a></li>
+                    <li><a href="#">Amphipathic Behaviour</a></li>
+                </ul>
+          </div>
+          <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    2. Amino Acids <span class="caret caret-up"></span>
+                </button>
+                <ul class="dropdown-menu drop-up" role="menu">
+                    <li><a href="#">Peptide Chain</a></li>
+                </ul>
+          </div>
+          <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    3. Proteins <span class="caret caret-up"></span>
+                </button>
+                <ul class="dropdown-menu drop-up" role="menu">
+                    <li><a href="#">&alpha;-Helix</a></li>
+                    <li><a href="#">&beta;-Helix</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Keratin</a></li>
+                    <li><a href="#">Collagen</a></li>
+                    <li><a href="#">Silk</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Myoglobin</a></li>
+                    <li><a href="#">Hemoglobin</a></li>
+                </ul>
+          </div>
+          <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    4. Lipids <span class="caret caret-up"></span>
+                </button>
+                <ul class="dropdown-menu drop-up" role="menu">
+                    <li><a href="#">Fluid Mosiac of Cell Membrane</a></li>
 
+                </ul>
+          </div>
+        </p>
+      </div>
+    </footer>
+      <!-- Biomolecules JavaScript -->
+      <script type="text/javascript" src="/js/components/hydrogenBonding.js"></script>
 
-          var createScene = function () {
-
-              // Create the scene space
-              var scene = new BABYLON.Scene(engine);
-
-              // Add a camera to the scene and attach it to the canvas
-              var camera = new BABYLON.ArcRotateCamera("Camera", (Math.PI / 2), (Math.PI / 2) , 30, BABYLON.Vector3.Zero(), scene);
-              camera.attachControl(canvas, true);
-
-              // Add lights to the scene
-              var light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(1, 1, 0), scene);
-              var light2 = new BABYLON.PointLight("light2", new BABYLON.Vector3(0, 1, -1), scene);
-
-
-
-              // Function creates a water molecule
-              var createWaterMolecule = function(x,y,z){
-
-                var retWaterMolecule = {};
-
-                // Hydrogen colors
-                var material = new BABYLON.StandardMaterial(scene);
-                material.alpha = 1;
-                material.diffuseColor = new BABYLON.Color3(1.0, 0.2, 0.7);
-
-
-                var waterMolecule = {
-                  h: BABYLON.MeshBuilder.CreateSphere("h", {}, scene),
-                  o1: BABYLON.MeshBuilder.CreateSphere("o1", {}, scene),
-                  o2: BABYLON.MeshBuilder.CreateSphere("o2",{}, scene)
-                };
-                waterMolecule.h.material = material;
-
-                // Hydrogen
-                waterMolecule.h.position.x = x;
-                waterMolecule.h.position.y = y;
-                waterMolecule.h.position.z = z;
-
-
-                scene.actionManager = new BABYLON.ActionManager(scene);
-                scene.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnKeyUpTrigger, function (evt) {
-                   if (evt.sourceEvent.key == "r") {
-                       console.log("SUP")
-                   }
-                }));
-
-                // First oxygen
-                waterMolecule.o1.position.x = x+2;
-                waterMolecule.o1.position.y = y+0;
-                waterMolecule.o1.position.z = z+2;
-
-                // Second oxygen
-                waterMolecule.o2.position.x = x+2;
-                waterMolecule.o2.position.y = y+0;
-                waterMolecule.o2.position.z = z-2;
-
-                var firstBond = [
-                    new BABYLON.Vector3(x+0, y+0, z+0),
-                    new BABYLON.Vector3(x+1, y+0, z-1),
-                    new BABYLON.Vector3(x+2, y+0, z-2)
-                ];
-                var lines = BABYLON.MeshBuilder.CreateLines("lines", {points: firstBond}, scene);
-
-                var secondBond = [
-                    new BABYLON.Vector3(x+0, y+0, z+0),
-                    new BABYLON.Vector3(x+1, y+0, z+1),
-                    new BABYLON.Vector3(x+2, y+0, z+2)
-                ];
-                var lines = BABYLON.MeshBuilder.CreateLines("lines", {points: secondBond}, scene);
-
-                retWaterMolecule.waterMolecule = waterMolecule;
-                retWaterMolecule.firstBond = firstBond;
-                retWaterMolecule.secondBond = secondBond;
-                retWaterMolecule.lines = lines;
-
-                return retWaterMolecule;
-
-              };
-
-              // Function creates chain of water molecules
-              var createWater = function(numMolecules,elevation){
-                waterMolecules = [];
-                counter = -1;
-                for(var i = 0; i < numMolecules; i++){
-                  for(var j = 0; j < numMolecules; j++){
-                    counter++;
-                    waterMolecules.push(createWaterMolecule((i*4),elevation,(-1*j*4)));
-
-                    var hydrogenBond1 = [
-                      new BABYLON.Vector3(
-                        waterMolecules[counter].secondBond[0].x,
-                        waterMolecules[counter].secondBond[0].y,
-                        waterMolecules[counter].secondBond[0].z
-                      ),
-                      new BABYLON.Vector3(
-                        waterMolecules[counter].secondBond[0].x-2,
-                        waterMolecules[counter].secondBond[0].y,
-                        waterMolecules[counter].secondBond[0].z-2
-                      )
-
-                    ];
-
-                    var dashedlines = BABYLON.Mesh.CreateDashedLines("lines1", hydrogenBond1, 3, 8, 8, scene, true);
-                    dashedlines = BABYLON.MeshBuilder.CreateDashedLines(null, {points: hydrogenBond1, instance: dashedlines});
-
-                    var hydrogenBond2 = [
-                        new BABYLON.Vector3(
-                          waterMolecules[counter].firstBond[0].x,
-                          waterMolecules[counter].firstBond[0].y,
-                          waterMolecules[counter].firstBond[0].z
-                        ),
-                        new BABYLON.Vector3(
-                          waterMolecules[counter].firstBond[0].x-2,
-                          waterMolecules[counter].firstBond[0].y,
-                          waterMolecules[counter].firstBond[0].z+2
-                        )
-                    ];
-
-                    var dashedlines2 = BABYLON.Mesh.CreateDashedLines("lines2", hydrogenBond2, 3, 8, 8, scene, true);
-                    dashedlines2 = BABYLON.MeshBuilder.CreateDashedLines(null, {points: hydrogenBond2, instance: dashedlines2});
-                  }
-                }
-              };
-
-              createWater(8,0);
-              createWater(8,2);
-              createWater(8,4);
-              return scene;
-
-          };
-
-          var scene = createScene();
-
-          engine.runRenderLoop(function () {
-              scene.render();
-          });
-
-          // Resize
-          window.addEventListener("resize", function () {
-              engine.resize();
-          });
       </script>
     </body>
 </html>
