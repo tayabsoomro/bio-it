@@ -5,13 +5,15 @@
     border: 1px solid black;
 }
 
+
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-  background-color: #f5f5f5;
+  background-color: #444;
+  border-top:6px solid #333;
 }
 
 .drop-up {

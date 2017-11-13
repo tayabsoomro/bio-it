@@ -29,10 +29,14 @@
           <br /><sup>1</sup>Deartpment of Computer Science, University of Saskatchewan
           <br /><sup>2</sup>Departments of Physiology & Pharmacology, University of Saskatchewan</p>
           <br />
-          <canvas id="renderCanvas"></canvas>
+          <canvas id="renderCanvas"></canvas><br />
+          <span onClick="toggleFooter()">Show/Hide</span>
+          <br />
         </div>
+
       </div>
-      <footer class="footer text-center">
+
+      <footer class="footer text-center" id="footerMenu">
       <div class="container text-center">
         <p class="text-muted text-center">
           <div class="btn-group">
@@ -82,7 +86,18 @@
     </footer>
       <!-- Biomolecules JavaScript -->
       <script type="text/javascript" src="/js/components/hydrogenBonding.js"></script>
-
+      <script>
+        footerDiv = true;
+        function toggleFooter(){
+          footer = document.getElementById("footerMenu");
+          if(footerDiv === true){
+            footer.style.display = "none";
+            footerDiv = false;
+          }else{
+            footer.style.display = "block";
+            footerDiv = true;
+          }
+        }
       </script>
     </body>
 </html>
