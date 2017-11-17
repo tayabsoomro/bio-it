@@ -6,10 +6,10 @@ var createScene = function () {
 
     // Create the scene space
     var scene = new BABYLON.Scene(engine);
-    scene.clearColor = new BABYLON.Color4.FromHexString("#99ddffFF");;
+    scene.clearColor = new BABYLON.Color4.FromHexString("#99ddffFF");
 
     // Add a camera to the scene and attach it to the canvas
-    var camera = new BABYLON.ArcRotateCamera("Camera", (Math.PI / 2), (Math.PI / 2) , 10, BABYLON.Vector3.Zero(), scene);
+    var camera = new BABYLON.ArcRotateCamera("Camera", (Math.PI / 2), (Math.PI / 4) , 20, BABYLON.Vector3.Zero(), scene);
     camera.attachControl(canvas, true);
 
     // Add lights to the scene
@@ -87,42 +87,53 @@ var createScene = function () {
       waterMolecules = [];
       counter = -1;
       for(var i = 0; i < numMolecules; i++){
-        for(var j = 0; j < numMolecules; j++){
-          counter++;
-          waterMolecules.push(createWaterMolecule((i*4),elevation,(-1*j*4)));
+        for(var j = 0; j < numMolecules; j++) {
+            counter++;
+            waterMolecules.push(createWaterMolecule((i * 4), elevation, (-1 * j * 4)));
 
-          var hydrogenBond1 = [
-            new BABYLON.Vector3(
-              waterMolecules[counter].secondBond[0].x,
-              waterMolecules[counter].secondBond[0].y,
-              waterMolecules[counter].secondBond[0].z
-            ),
-            new BABYLON.Vector3(
-              waterMolecules[counter].secondBond[0].x-2,
-              waterMolecules[counter].secondBond[0].y,
-              waterMolecules[counter].secondBond[0].z-2
-            )
+            var hydrogenBond1 = [
+                new BABYLON.Vector3(
+                    waterMolecules[counter].secondBond[0].x,
+                    waterMolecules[counter].secondBond[0].y,
+                    waterMolecules[counter].secondBond[0].z
+                ),
+                new BABYLON.Vector3(
+                    waterMolecules[counter].secondBond[0].x - 2,
+                    waterMolecules[counter].secondBond[0].y,
+                    waterMolecules[counter].secondBond[0].z - 2
+                )
 
-          ];
+            ];
 
-          var dashedlines = BABYLON.Mesh.CreateDashedLines("lines1", hydrogenBond1, 3, 8, 8, scene, true);
-          dashedlines = BABYLON.MeshBuilder.CreateDashedLines(null, {points: hydrogenBond1, instance: dashedlines});
+            if (i == 1) {
 
-          var hydrogenBond2 = [
-              new BABYLON.Vector3(
-                waterMolecules[counter].firstBond[0].x,
-                waterMolecules[counter].firstBond[0].y,
-                waterMolecules[counter].firstBond[0].z
-              ),
-              new BABYLON.Vector3(
-                waterMolecules[counter].firstBond[0].x-2,
-                waterMolecules[counter].firstBond[0].y,
-                waterMolecules[counter].firstBond[0].z+2
-              )
-          ];
+                var dashedlines = BABYLON.Mesh.CreateDashedLines("lines1", hydrogenBond1, 3, 8, 8, scene, true);
+                dashedlines = BABYLON.MeshBuilder.CreateDashedLines(null, {
+                    points: hydrogenBond1,
+                    instance: dashedlines
+                });
+            }
+            var hydrogenBond2 = [
+                new BABYLON.Vector3(
+                    waterMolecules[counter].firstBond[0].x,
+                    waterMolecules[counter].firstBond[0].y,
+                    waterMolecules[counter].firstBond[0].z
+                ),
+                new BABYLON.Vector3(
+                    waterMolecules[counter].firstBond[0].x - 2,
+                    waterMolecules[counter].firstBond[0].y,
+                    waterMolecules[counter].firstBond[0].z + 2
+                )
+            ];
 
-          var dashedlines2 = BABYLON.Mesh.CreateDashedLines("lines2", hydrogenBond2, 3, 8, 8, scene, true);
-          dashedlines2 = BABYLON.MeshBuilder.CreateDashedLines(null, {points: hydrogenBond2, instance: dashedlines2});
+            if (i == 1) {
+                var dashedlines2 = BABYLON.Mesh.CreateDashedLines("lines2", hydrogenBond2, 3, 8, 8, scene, true);
+                dashedlines2 = BABYLON.MeshBuilder.CreateDashedLines(null, {
+                    points: hydrogenBond2,
+                    instance: dashedlines2
+                });
+
+            }
         }
       }
     };
@@ -133,6 +144,7 @@ var createScene = function () {
 };
 
 var scene = createScene();
+scene.registerBeforeRender(myAnimation);
 
 engine.runRenderLoop(function () {
     scene.render();
@@ -142,3 +154,20 @@ engine.runRenderLoop(function () {
 window.addEventListener("resize", function () {
     engine.resize();
 });
+
+
+var radius_step = 1;
+var alpha_step = .02;
+
+function myAnimation() {
+    var scene = engine.scenes[0];
+    var camera = scene.activeCamera;
+    camera.radius -= radius_step;
+    if (camera.radius < 60) {
+        radius_step = 0;
+        camera.alpha -= alpha_step;
+        if (camera.alpha < 0) {
+            scene.unregisterBeforeRender(myAnimation);
+        }
+    }
+}
