@@ -1,0 +1,23 @@
+{
+  "name": "glycine",
+  "bregions": [
+    {
+      "name": "carboxyl",
+      "pKa": [0.5,2.34],
+      "protonated": "COOH",
+      "unprotonated": "COO-",
+      "charges": ["+1","+1/2"]
+
+    },
+    {
+      "name": "amino",
+      "pKa": [1.5,9.60],
+      "protonated": "NH3+",
+      "unprotonated": "NH2",
+      "charges": ["-1/2","-1"]
+
+    }
+  ],
+  "pI": 5.97
+
+}
