@@ -127,7 +127,4 @@ d3.json("../../data/glycine-tt.json", function(error,data){
         .attr("y",y(bRegions[1].pKa[1]+1));
 
 
-    d3.select(".titrationRender").select("svg").attr("style","background-color:rgba(0,0,0,0.5)");
-
-
 });
