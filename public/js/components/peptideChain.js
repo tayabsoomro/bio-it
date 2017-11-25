@@ -1,3 +1,6 @@
+
+
+
 function drawPeptide(){
 
     seq = document.getElementById("sequence").value;
@@ -16,21 +19,14 @@ function drawPeptide(){
     }
 }
 
-function validateInput(){
-    seq = document.getElementById("yourAnswer").value;
-
-    if(!//)
-}
 
 function checkAnswer(){
     answer = document.getElementById("yourAnswer");
     correctAnswer = document.getElementById("imgAnswer");
     alertResponse = document.getElementById("alertResponse");
 
-
-
-    // Validation
-    if(answer.value === "" || answer === null){
+    // Validate the input
+    if(!validPolyPeptide(answer)){
         alertResponse.innerHTML = "Type an answer first!";
         alertResponse.classList.remove("alert-success");
         alertResponse.classList.add("alert-danger");
@@ -55,6 +51,8 @@ function checkAnswer(){
 }
 
 function generatePeptide(){
+
+    console.log("Goes in");
 
     alertResponse = document.getElementById("alertResponse");
     alertResponse.classList.remove("alert-success");

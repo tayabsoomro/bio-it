@@ -80,7 +80,7 @@
                                           <div id="collapseTwo" class="panel-collapse collapse">
                                               <div class="panel-body">
                                                   <div class="alert" id="alertResponse"></div>
-                                                  <form>
+                                                  <form onsubmit="event.preventDefault();">
                                                   <div class="input-group">
                                                       <input type="text" oninput="handleInput(event)" class="form-control" placeholder="Your answer here." name="sequence" id="yourAnswer" required/>
                                                       <div class="input-group-btn">
@@ -142,5 +142,9 @@
       <!-- Biomolecules JavaScript -->
       <script src="js/components/peptideChain.js"></script>
       <script src="js/components/titrationCurve.js"></script>
+
+      <script type="text/javascript">
+        generatePeptide();
+      </script>
     </body>
 </html>
