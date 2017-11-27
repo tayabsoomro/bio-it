@@ -37,7 +37,7 @@
                   </ul>
                   <br /><br />
                   <div class="tab-content ">
-                      <div class="tab-pane active" id="1">
+                      <div class="tab-pane" id="1">
 
                           <div class="col-lg-12">
                               <div class="col-lg-2"></div>
@@ -105,7 +105,7 @@
                           <div class="col-lg-12">
                           </div>
                       </div>
-                      <div class="tab-pane" id="2">
+                      <div class="tab-pane  active" id="2">
                           <h1 class="lead" style="font-size:30px;font-weight:bold;">Visualize Titration Curves</h1>
                           <div class="col-lg-12">
                               <div class="col-lg-4"></div>
@@ -113,10 +113,10 @@
                                   <p class="lead">
                                     <form onsubmit="event.preventDefault();">
                                       <div class="form-group">
-                                        <select class="form-control">
+                                        <select class="form-control" id="aminoAcidSelect" onchange="processSelection()">
                                             <optgroup label="Diprotic">
                                               <option selected value="" disabled hidden="true">Choose an amino acid:</option>
-                                                <option>Glycine</option>
+                                                <option onclick="wth()">Glycine</option>
                                                 <option>Alanine</option>
                                                 <option>Proline</option>
                                                 <option>Valine</option>
@@ -150,8 +150,8 @@
 
 
 
-                              <button class="btn btn-primary" disabled><i class="fa fa-backward" aria-hidden="true"></i></button>
-                              <button class="btn btn-primary"> <i class="fa fa-forward" aria-hidden="true"></i></button>
+                              <button class="btn btn-primary" id="btn-rev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+                              <button class="btn btn-primary" id="btn-fwd"> <i class="fa fa-forward" aria-hidden="true"></i></button>
 
                           </div>
                           <div class="col-lg-12">
@@ -175,10 +175,34 @@
 
       <!-- Biomolecules JavaScript -->
       <script src="js/components/peptideChain.js"></script>
-      <script src="js/components/titrationCurve.js"></script>
+      <script src="js/titration/titrationCurve.js"></script>
 
       <script type="text/javascript">
-        generatePeptide();
+            function processSelection(){
+
+                diprotic = ["Glycine","Alanine","Proline","Valine","Leucine","Isoleucine","Methionine","Tryptophan","Phenylalanine","Serine","Threonine","Tyrosine","Asparagine","Glutamine","Cysteine"];
+
+                triprotic = ["Lysine","Argenine","Histidine","Aspartate","Glutamate"];
+
+                var selectBox = document.getElementById("aminoAcidSelect");
+                var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+
+
+                switch(selectedValue){
+                    case "Glycine":
+                        titrationGlycine();
+                        break;
+                    default:
+                        console.log("Ahan!");
+                }
+
+//                if($.inArray(selectedValue, "Glycine") >= 0) {
+//                    titrationDiprotic();
+//                } else if($.inArray(selectedValue, triprotic) >= 0) {
+//                    titrationTriprotic();
+//                }
+            }
+            generatePeptide();
       </script>
     </body>
 </html>
