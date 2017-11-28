@@ -1,64 +1,34 @@
-Welcome to the AWS CodeStar sample web application
+Interactive Biochemistry Module
 ==================================================
 
-This sample code helps get you started with a simple Express web application
-deployed by AWS CodeDeploy to an Amazon EC2 instance.
+This is a tool created for BMSC 200 (Biochemistry) students at the U of S to understand the concepts
+taught in classroom in an interactive fashion. You can checkout the tool [here](http://tayabsoomro.me/projects/interactive-biochemistry-module/)
 
-What's Here
+Features
 -----------
 
-This sample includes:
+With this tool, students can.
 
-* README.md - this file
-* app.js - this file contains the code for your application
-* appspec.yml - this file is used by AWS CodeDeploy when deploying the web
-  application to EC2
-* package.json - this file contains various metadata relevant to your Node.js
-  application such as dependencies
-* public/ - this directory contains static web assets used by your application
-* scripts/ - this directory contains scripts used by AWS CodeDeploy when
-  installing and deploying your application on the Amazon EC2 instance
+* Generate peptide-chains of their names.
+* Test their knowledge of peptide chains by answering questions.
+* See the visualizations of different amino acid titration curves.
 
 
-Getting Started
+Change Log
 ---------------
 
-These directions assume you want to develop on your local computer, and not
-from the Amazon EC2 instance itself. If you're on the Amazon EC2 instance, the
-virtual environment is already set up for you, and you can start working on the
-code.
+- November 28th, 2017
+    - Initial release of the tool.
+    - Thoroughly tested the peptide functionality.
+    - Released Glycine and Alanine titration animations.
 
-To work on the sample code, you'll need to clone your project's repository to your
-local computer. If you haven't, do that first. You can find instructions in the
-AWS CodeStar user guide.
 
-1. Install Node.js on your computer.  For details on available installers visit
-   https://nodejs.org/en/download/.
-
-2. Install NPM dependencies:
-
-        $ npm install
-
-3. Start the development server:
-
-        $ node app.js
-
-4. Open http://127.0.0.1:3000/ in a web browser to view your application.
-
-What Do I Do Next?
+References
 ------------------
 
-Once you have a virtual environment running, you can start making changes to
-the sample Express web application. We suggest making a small change to
-/public/index.html first, so you can see how changes pushed to your project's
-repository are automatically picked up by your project pipeline and deployed
-to the Amazon EC2 instance. (You can watch the progress on your project
-dashboard.) Once you've seen how that works, start developing your own code,
-and have fun!
+The construction of this project was done with the help of following programs/people.
 
-Learn more about AWS CodeStar by reading the user guide.  Ask questions or make
-suggestions on our forum.
-
-User Guide: http://docs.aws.amazon.com/codestar/latest/userguide/welcome.html
-
-Forum: https://forums.aws.amazon.com/forum.jspa?forumID=248
+1. PepDraw - For generate the peptide chain images.
+2. D3js - For creating graphs and animations of titration curves.
+3. Ruby Ahmed - General help in proofreading the concepts.
+4. Dr. Scott Napper - Giving feedback and suggestions for the project.
