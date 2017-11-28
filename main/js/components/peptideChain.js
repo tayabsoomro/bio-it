@@ -52,8 +52,6 @@ function checkAnswer(){
 
 function generatePeptide(){
 
-    console.log("Goes in");
-
     alertResponse = document.getElementById("alertResponse");
     alertResponse.classList.remove("alert-success");
     alertResponse.classList.remove("alert-danger");
@@ -80,12 +78,18 @@ function generatePeptide(){
     document.getElementById("Credits2").innerHTML =
         "Powered by <a href='http://www.tulane.edu/~biochem/WW/PepDraw'>PepDraw</a>";
 
-    var imgAnswer = document.createElement("input");
-    imgAnswer.setAttribute("type","hidden");
-    imgAnswer.setAttribute("id","imgAnswer");
-    imgAnswer.setAttribute("value",seq);
+    if(document.getElementById("imgAnswer") === null ){
+        var imgAnswer = document.createElement("input");
+        imgAnswer.setAttribute("type","hidden");
+        imgAnswer.setAttribute("id","imgAnswer");
+        imgAnswer.setAttribute("value",seq);
 
-    document.getElementById("testPeptideChainIMG").appendChild(imgAnswer);
+        document.getElementById("testPeptideChainIMG").appendChild(imgAnswer);
+    } else{
+        document.getElementById("imgAnswer").setAttribute("value",seq);
+    }
+
+
 }
 
 function validPolyPeptide(src)

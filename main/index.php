@@ -125,8 +125,8 @@
                                     <form onsubmit="event.preventDefault();">
                                       <div class="form-group">
                                         <select class="form-control" id="aminoAcidSelect" onchange="processSelection()">
-                                            <optgroup label="Diprotic">
-                                              <option selected value="" disabled hidden="true">Choose an amino acid:</option>
+                                            <optgroup label="&#x2192; Diprotic">
+                                              <option selected value="" disabled hidden>Choose an amino acid:</option>
                                                 <option>Glycine</option>
                                                 <option>Alanine</option>
                                                 <option disabled>Proline</option>
@@ -143,7 +143,7 @@
                                                 <option disabled>Glutamine</option>
                                                 <option disabled>Cysteine</option>
                                             </optgroup>
-                                            <optgroup label="Triprotic">
+                                            <optgroup label="&#x2192; Triprotic">
                                                 <option disabled>Lysine</option>
                                                 <option disabled>Argenine</option>
                                                 <option disabled>Histidine</option>
