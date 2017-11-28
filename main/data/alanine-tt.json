@@ -4,21 +4,21 @@
     {
       "name": "carboxyl",
       "pKa": [0.5,2.34],
-      "protonated": "+(NH3)—CH2—COOH",
-      "unprotonated": "+(NH3)—CH2—(COO-)",
+      "protonated": "+(NH3)—C2H4—COOH",
+      "unprotonated": "+(NH3)—C2H4—(COO-)",
       "charges": ["+1","+1/2"]
 
     },
     {
       "name": "amino",
       "pKa": [1.5,9.60],
-      "protonated": "+(NH3)—CH2—(COO-)",
-      "unprotonated": "NH2—CH2—(COO-)",
+      "protonated": "+(NH3)—C2H4—(COO-)",
+      "unprotonated": "NH2—C2H4—(COO-)",
       "charges": ["-1/2","-1"]
 
     }
   ],
-  "pI": 5.97,
+  "pI": 6.00,
   "axis": [
     [
       { "eOH": 0, "pH": 0 },
@@ -32,10 +32,10 @@
       { "eOH": 0.75, "pH": 3 },
       { "eOH": 0.96, "pH": 3.5 },
       { "eOH": 0.99, "pH": 4 },
-      { "eOH": 1, "pH": 5.97 }
+      { "eOH": 1, "pH": 6.00 }
     ],
     [
-      { "eOH": 1, "pH": 5.97 },
+      { "eOH": 1, "pH": 6.00 },
       { "eOH": 1, "pH": 6 },
       { "eOH": 1, "pH": 7 },
       { "eOH": 1, "pH": 7.5 },
