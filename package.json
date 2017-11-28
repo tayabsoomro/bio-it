@@ -1,9 +1,0 @@
-{
-    "name": "express-template-HelloWorld",
-    "description": "Hello World Node Express web application",
-    "version": "0.0.1",
-    "private": true,
-    "dependencies": {
-        "express": "latest"
-    }
-}
