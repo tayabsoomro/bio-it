@@ -41,7 +41,7 @@ function titrationGlycine(){
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.json("../../data/glycine-tt.json", function(error, data) {
+    d3.json("./data/glycine-tt.json", function(error, data) {
 
         if (error) throw error;
         
@@ -315,7 +315,7 @@ function titrationAlanine(){
             "translate(" + margin.left + "," + margin.top + ")");
 
 
-    d3.json("../../data/alanine-tt.json", function(error, data) {
+    d3.json("./data/alanine-tt.json", function(error, data) {
 
         if (error) throw error;
 
