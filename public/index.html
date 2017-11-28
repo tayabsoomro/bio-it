@@ -116,28 +116,28 @@
                                         <select class="form-control" id="aminoAcidSelect" onchange="processSelection()">
                                             <optgroup label="Diprotic">
                                               <option selected value="" disabled hidden="true">Choose an amino acid:</option>
-                                                <option onclick="wth()">Glycine</option>
+                                                <option>Glycine</option>
                                                 <option>Alanine</option>
-                                                <option>Proline</option>
-                                                <option>Valine</option>
-                                                <option>Leucine</option>
-                                                <option>Isoleucine</option>
-                                                <option>Methionine</option>
-                                                <option>Tryptophan</option>
-                                                <option>Phenylalanine</option>
-                                                <option>Serine</option>
-                                                <option>Threonine</option>
-                                                <option>Tyrosine</option>
-                                                <option>Asparagine</option>
-                                                <option>Glutamine</option>
-                                                <option>Cysteine</option>
+                                                <option disabled>Proline</option>
+                                                <option disabled>Valine</option>
+                                                <option disabled>Leucine</option>
+                                                <option disabled>Isoleucine</option>
+                                                <option disabled>Methionine</option>
+                                                <option disabled>Tryptophan</option>
+                                                <option disabled>Phenylalanine</option>
+                                                <option disabled>Serine</option>
+                                                <option disabled>Threonine</option>
+                                                <option disabled>Tyrosine</option>
+                                                <option disabled>Asparagine</option>
+                                                <option disabled>Glutamine</option>
+                                                <option disabled>Cysteine</option>
                                             </optgroup>
                                             <optgroup label="Triprotic">
-                                                <option>Lysine</option>
-                                                <option>Argenine</option>
-                                                <option>Histidine</option>
-                                                <option>Aspartate</option>
-                                                <option>Glutamate</option>
+                                                <option disabled>Lysine</option>
+                                                <option disabled>Argenine</option>
+                                                <option disabled>Histidine</option>
+                                                <option disabled>Aspartate</option>
+                                                <option disabled>Glutamate</option>
                                             </optgroup>
                                         </select>
                                       </div>
@@ -189,18 +189,18 @@
 
 
                 switch(selectedValue){
-                    case "Glycine":
+                    case "Glycine" || "Alanine":
+                        clickStackNum = 0;
                         titrationGlycine();
+                        break;
+                    case "Valine":
+                        clickStackNum = 0;
+                        titrationAlanine();
                         break;
                     default:
                         console.log("Ahan!");
                 }
-
-//                if($.inArray(selectedValue, "Glycine") >= 0) {
-//                    titrationDiprotic();
-//                } else if($.inArray(selectedValue, triprotic) >= 0) {
-//                    titrationTriprotic();
-//                }
+                
             }
             generatePeptide();
       </script>
