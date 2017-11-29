@@ -20,10 +20,13 @@ With this tool, students can.
 Change Log
 ---------------
 
-- November 28th, 2017
+- November 27th, 2017
     - Initial release of the tool.
     - Thoroughly tested the peptide functionality.
     - Released Glycine and Alanine titration animations.
+    
+- November 28th, 2017
+    - Fix the issue where the correct answer didn't get registered for the peptide test section
 
 
 References
