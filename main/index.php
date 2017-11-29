@@ -48,7 +48,7 @@
                   </ul>
                   <br /><br />
                   <div class="tab-content ">
-                      <div class="tab-pane active" id="1">
+                      <div class="tab-pane " id="1">
 
                           <div class="col-lg-12">
                               <div class="col-lg-2"></div>
@@ -116,7 +116,7 @@
                           <div class="col-lg-12">
                           </div>
                       </div>
-                      <div class="tab-pane" id="2">
+                      <div class="tab-pane active" id="2">
                           <h1 class="lead" style="font-size:30px;font-weight:bold;">Visualize Titration Curves</h1>
                           <div class="col-lg-12">
                               <div class="col-lg-4"></div>
@@ -146,7 +146,7 @@
                                             <optgroup label="&#x2192; Triprotic">
                                                 <option disabled>Lysine</option>
                                                 <option disabled>Argenine</option>
-                                                <option disabled>Histidine</option>
+                                                <option>Histidine</option>
                                                 <option disabled>Aspartate</option>
                                                 <option disabled>Glutamate</option>
                                             </optgroup>
@@ -209,6 +209,10 @@
                     case "Valine":
                         clickStackNum = 0;
                         titrationAlanine();
+                        break;
+                    case "Histidine":
+                        clickStackNum = 0;
+                        titrationHistidine();
                         break;
                     default:
                         console.log("Ahan!");
