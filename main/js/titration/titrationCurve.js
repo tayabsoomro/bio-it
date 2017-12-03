@@ -41,7 +41,7 @@ function titrationGlycine(){
     d3.json("https://tayabsoomro.github.io/interactive-biochemistry-module/main/data/glycine-tt.json", function(error, data) {
 
         if (error) throw error;
-        
+
 
         data.axis.forEach(function(d){
            d.forEach(function(m){
@@ -307,7 +307,7 @@ function titrationGlycine(){
 
 function titrationHistidine(){
 
-    d3.select(".mainSVG").remove();
+    d3.select(".mainSVG > *").remove();
 
     // append the svg object to the body of the page
     // appends a 'group' element to 'svg'
@@ -336,7 +336,7 @@ function titrationHistidine(){
             .y(function(d){ return y(d.pH); });
 
         x.domain([0,3]);
-        y.domain([0,12]);
+        y.domain([0,14]);
 
         xAxis = d3.axisBottom(x)
             .tickValues([0,1,2,3]);
@@ -395,6 +395,18 @@ function titrationHistidine(){
             }
         }
 
+        function undrawStage(){
+            if(clickStackNum == 0){
+              unDrawCurve(path1);
+            } else if(clickStackNum == 1){
+              unDrawCurve(path2);
+            } else if(clickStackNum == 2){
+              unDrawCurve(path3);
+            } else if(clickStackNum == 3){
+              unDrawCurve(path4);
+            }
+        }
+
         function drawCurve(path,data){
             path = svg.append("path")
                 .attr("d", vline(data.axis[clickStackNum]))
@@ -433,20 +445,20 @@ function titrationHistidine(){
                             .attr("cy", y(data.bregions[0].pKa[1]+3.5) + 15)
                             .attr("r", 5);
 
-
                         svg.append("svg:image")
-                            .attr("xlink:href", "http://localhost/BMSCApp/main/images/glycine2.png")
+                            .attr("xlink:href", "http://localhost/BMSCApp/main/images/histidine2.png")
                             .attr("class","eqtn2")
                             .attr("x", x(data.bregions[1].pKa[0] - data.bregions[0].pKa[0]) -50)
                             .attr("y",20)
                             .attr("height", 100)
                             .attr("width", 100);
+
                     }
 
                     if(clickStackNum == 1){
 
                         svg.append("svg:image")
-                            .attr("xlink:href", "http://localhost/BMSCApp/main/images/glycine1.png")
+                            .attr("xlink:href", "http://localhost/BMSCApp/main/images/histidine1.png")
                             .attr("class","eqtn1")
                             .attr("x", x(data.bregions[br].pKa[0]/2) -20)
                             .attr("y",20)
@@ -470,9 +482,9 @@ function titrationHistidine(){
                     if(clickStackNum == 4){
 
                         svg.append("svg:image")
-                            .attr("xlink:href", "http://localhost/BMSCApp/main/images/glycine3.png")
+                            .attr("xlink:href", "http://localhost/BMSCApp/main/images/histidine4.png")
                             .attr("class","eqtn3")
-                            .attr("x",x(data.bregions[br].pKa[0]) -10)
+                            .attr("x",x(data.bregions[br].pKa[0]+0.7))
                             .attr("y",20)
                             .attr("height", 100)
                             .attr("width", 100);
@@ -491,6 +503,14 @@ function titrationHistidine(){
                             .attr("cx", x(data.bregions[1].pKa[0]))
                             .attr("cy", y(data.bregions[1].pKa[1]))
                             .attr("r", 5);
+
+                        svg.append("svg:image")
+                            .attr("xlink:href", "http://localhost/BMSCApp/main/images/histidine3.png")
+                            .attr("class","eqtn3")
+                            .attr("x",x(data.bregions[br].pKa[0]) -10)
+                            .attr("y",20)
+                            .attr("height", 100)
+                            .attr("width", 100);
 
                     }
 
@@ -869,4 +889,3 @@ function titrationAlanine(){
 
     });
 }
-
