@@ -4,8 +4,8 @@ Interactive Biochemistry Module
 This is a tool created for BMSC 200 (Biochemistry) students at the U of S to understand the concepts
 taught in classroom in an interactive fashion. You can checkout the tool [here](http://tayabsoomro.me/projects/interactive-biochemistry-module/)
 
-This project is going to be presented at the Undergraduate Project Symposium hosted by USSU at 
-the University of Saskatchewan. 
+This project is going to be presented at the Undergraduate Project Symposium hosted by USSU at
+the University of Saskatchewan.
 
 Features
 -----------
@@ -24,10 +24,13 @@ Change Log
     - Initial release of the tool.
     - Thoroughly tested the peptide functionality.
     - Released Glycine and Alanine titration animations.
-    
+
 - November 28th, 2017
     - Fix the issue where the correct answer didn't get registered for the peptide test section
 
+
+- December 2nd, 2017
+    - Fix the issue where the forward button remained disabled even after going back a step.
 
 References
 ------------------
