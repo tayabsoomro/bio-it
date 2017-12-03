@@ -376,6 +376,7 @@ function titrationHistidine(){
 
         d3.select("#btn-rev").on("click",function(){
             d3.select("#btn-rev").attr("disabled","");
+            d3.select("#btn-fwd").attr("disabled",null);
             clickStackNum--;
             undrawStage();
         });
@@ -384,7 +385,6 @@ function titrationHistidine(){
 
             if(clickStackNum == 0) { // Stage 1
                 path1 = drawCurve(path1,data);
-
             } else if (clickStackNum == 1){
 
                 path2 = drawCurve(path2,data);
@@ -408,6 +408,9 @@ function titrationHistidine(){
         }
 
         function drawCurve(path,data){
+
+          console.log(clickStackNum);
+
             path = svg.append("path")
                 .attr("d", vline(data.axis[clickStackNum]))
                 .attr("class", "line");
@@ -594,6 +597,8 @@ function titrationHistidine(){
                         d3.selectAll(".pka2text").remove();
                         d3.selectAll(".pka2circle").remove();
                     } else if(clickStackNum == 3){
+                        d3.selectAll(".pka3text").remove();
+                        d3.selectAll(".pka3circle").remove();
                         d3.selectAll(".eqtn3").remove();
                     }
 
