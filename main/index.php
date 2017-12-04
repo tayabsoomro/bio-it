@@ -1,24 +1,62 @@
 <?php
 
+$submitted = false;
+
 if(isset($_POST['submit'])) {
   // Submitting feedback
   $name = isset($_POST['name']) ? $_POST['name'] : "N/a";
   $feedback = $_POST['feedback'];
 
-  // Adding feedback to the database
+  // // Escape user input
+  $name = addslashes($name);
+  $feedback = addslashes($feedback);
+  $ip = get_client_ip();
 
+  // Adding feedback to the database
   $servername = "localhost";
   $username = "tayaxord_admin";
   $password = "Tayab123";
 
   // Create connection
-  $conn = new mysqli($servername, $username, $password);
+  $conn = mysqli_connect("localhost", "tayaxord_admin", "Tayab123", "tayaxord_ibiocm");
 
   // Check connection
-  if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
+  if (mysqli_connect_errno()) {
+      die("Connection failed: " . mysqli_connect_error());
+  }else{
+
+    $query = "INSERT INTO `feedback` (author_name,author_ip,feedback) VALUES ('$name','$ip','$feedback')";
+
+    if (mysqli_query($conn,$query) === TRUE) {
+      echo "Yo!";
+      $submitted = true;
+    }else{
+      echo "This-> " . mysqli_error($conn);
+    }
+
+    mysqli_close($conn);
+
   }
 
+}
+
+function get_client_ip() {
+    $ipaddress = '';
+    if (getenv('HTTP_CLIENT_IP'))
+        $ipaddress = getenv('HTTP_CLIENT_IP');
+    else if(getenv('HTTP_X_FORWARDED_FOR'))
+        $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
+    else if(getenv('HTTP_X_FORWARDED'))
+        $ipaddress = getenv('HTTP_X_FORWARDED');
+    else if(getenv('HTTP_FORWARDED_FOR'))
+        $ipaddress = getenv('HTTP_FORWARDED_FOR');
+    else if(getenv('HTTP_FORWARDED'))
+       $ipaddress = getenv('HTTP_FORWARDED');
+    else if(getenv('REMOTE_ADDR'))
+        $ipaddress = getenv('REMOTE_ADDR');
+    else
+        $ipaddress = 'UNKNOWN';
+    return $ipaddress;
 }
 
 ?>
@@ -62,6 +100,12 @@ if(isset($_POST['submit'])) {
               <p class="text-center" style="font-size:13px;font-family: 'Times New Roman', Times, serif;">Soomro T<sup>1</sup>, Ahmed R<sup>2</sup>
               <br /><sup>1</sup>Deartpment of Computer Science, University of Saskatchewan
               <br /><sup>2</sup>Departments of Physiology & Pharmacology, University of Saskatchewan</p>
+              <br /><br /><br />
+              <?php if($submitted == true){ ?>
+              <div class="alert alert-success">
+                Thank you for your feedback!
+              </div>
+              <?php } ?>
               <br />
               <div class="col-lg-12">
                   <ul class="nav nav-tabs">
@@ -205,7 +249,7 @@ if(isset($_POST['submit'])) {
                   </div>
                   <div id="feedback">
                   	<div id="feedback-form" style='display:none;' class="col-xs-4 col-md-4 panel panel-default">
-                  		<form method="post" action="" class="form panel-body">
+                  		<form method="post" action="index.php" class="form panel-body">
                   			<div class="form-group">
                   				<input class="form-control" name="name" autofocus placeholder="Your Name (Optional)" type="text" />
                   			</div>
