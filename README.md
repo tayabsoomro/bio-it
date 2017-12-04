@@ -32,6 +32,9 @@ Change Log
 - December 2nd, 2017
     - Fix the issue where the forward button remained disabled even after going back a step.
 
+- December 4th, 2017
+    - Add feedback functionality for the students to give reviews about the software.
+
 References
 ------------------
 
