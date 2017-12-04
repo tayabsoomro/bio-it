@@ -1,4 +1,28 @@
+<?php
 
+if(isset($_POST['submit'])) {
+  // Submitting feedback
+  $name = isset($_POST['name']) ? $_POST['name'] : "N/a";
+  $feedback = $_POST['feedback'];
+
+  // Adding feedback to the database
+
+  $servername = "localhost";
+  $username = "tayaxord_admin";
+  $password = "Tayab123";
+
+  // Create connection
+  $conn = new mysqli($servername, $username, $password);
+
+  // Check connection
+  if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+  }
+  echo "Connected successfully";
+
+}
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,6 +32,8 @@
         <link rel="stylesheet" href="./css/master.css">
 
         <link rel="stylesheet" href="./css/titration.css">
+
+        <link rel="stylesheet" href="./css/feedback.css">
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
@@ -48,7 +74,7 @@
                   </ul>
                   <br /><br />
                   <div class="tab-content ">
-                      <div class="tab-pane " id="1">
+                      <div class="tab-pane active" id="1">
 
                           <div class="col-lg-12">
                               <div class="col-lg-2"></div>
@@ -116,7 +142,7 @@
                           <div class="col-lg-12">
                           </div>
                       </div>
-                      <div class="tab-pane active" id="2">
+                      <div class="tab-pane" id="2">
                           <h1 class="lead" style="font-size:30px;font-weight:bold;">Visualize Titration Curves</h1>
                           <div class="col-lg-12">
                               <div class="col-lg-4"></div>
@@ -148,7 +174,7 @@
                                                 <option disabled>Argenine</option>
                                                 <option>Histidine</option>
                                                 <option disabled>Aspartate</option>
-                                                <option disabled>Glutamate</option>
+                                                <option>Glutamate</option>
                                             </optgroup>
                                         </select>
                                       </div>
@@ -178,7 +204,22 @@
                           </div>
                       </div>
                   </div>
-              </div>
+                  <div id="feedback">
+                  	<div id="feedback-form" style='display:none;' class="col-xs-4 col-md-4 panel panel-default">
+                  		<form method="post" action="" class="form panel-body">
+                  			<div class="form-group">
+                  				<input class="form-control" name="name" autofocus placeholder="Your Name (Optional)" type="text" />
+                  			</div>
+                  			<div class="form-group">
+                  				<textarea class="form-control" name="feedback" required placeholder="What do you think about this program?" rows="5"></textarea>
+                  			</div>
+                  			<button type="submit" name="submit" class="btn btn-primary"> <i class="fa fa-paper-plane-o fa-lg" aria-hidden="true"></i>    Send </button>
+                  		</form>
+                  	</div>
+                  	<div id="feedback-tab">Feedback</div>
+                  </div>
+
+            </div>
               <br />
             </div>
       </div>
@@ -188,6 +229,26 @@
       <script src="js/titration/titrationCurve.js"></script>
 
       <script type="text/javascript">
+                  $(function() {
+                    $("#feedback-tab").click(function() {
+                    $("#feedback-form").toggle("slide");
+                    });
+
+                    $("#feedback-form form").on('submit', function(event) {
+                    var $form = $(this);
+                    $.ajax({
+                    type: $form.attr('method'),
+                    url: $form.attr('action'),
+                    data: $form.serialize(),
+                    success: function() {
+                      $("#feedback-form").toggle("slide").find("textarea").val('');
+                    }
+                    });
+                    });
+                });
+
+
+
             function processSelection(){
 
                 diprotic = ["Glycine","Alanine","Proline","Valine","Leucine","Isoleucine","Methionine","Tryptophan","Phenylalanine","Serine","Threonine","Tyrosine","Asparagine","Glutamine","Cysteine"];
@@ -214,6 +275,9 @@
                         clickStackNum = 0;
                         titrationHistidine();
                         break;
+                    case "Glutamate":
+                        clickStackNum = 0;
+                        titrationGlutamate();
                     default:
                         console.log("Ahan!");
                 }
