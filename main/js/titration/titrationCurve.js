@@ -321,7 +321,7 @@ function titrationHistidine(){
             "translate(" + margin.left + "," + margin.top + ")");
 
 
-    d3.json("../http://tayabsoomro.me/projects/interactive-biochemistry-module/data/histidine-tt.json", function(error, data) {
+    d3.json("http://tayabsoomro.me/projects/interactive-biochemistry-module/data/histidine-tt.json", function(error, data) {
 
         data.axis.forEach(function(d){
             d.forEach(function(m){
