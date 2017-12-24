@@ -24,7 +24,7 @@ var svg = d3.select(".titrationRender").append("svg")
     .attr("transform",
         "translate(" + margin.left + "," + margin.top + ")");
 
-d3.json('./assets/data/diproticGraphData.json', function(error,data){
+d3.json('./assets/data/triproticGraphData.json', function(error,data){
     if(error) throw error;
     console.log(data);
 
