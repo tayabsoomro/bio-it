@@ -141,7 +141,8 @@
   "pi": 2.77,
   "states": ['../assets/images/aspartate1.png',
              '../assets/images/aspartate2.png',
-             '../assets/images/aspartate3.png']
+             '../assets/images/aspartate3.png',
+             '../assets/images/aspartate.png']
 },
 {
   "name": "glutamate",
@@ -151,7 +152,8 @@
   "pi": 3.22,
   "states": ['../assets/images/glutamate1.png',
              '../assets/images/glutamate2.png',
-             '../assets/images/glutamate3.png']
+             '../assets/images/glutamate3.png',
+             '../assets/images/glutamate4.png']
 },
 {
   "name": "lysine",
@@ -161,7 +163,8 @@
   "pi": 9.74,
   "states": ['../assets/images/lysine1.png',
              '../assets/images/lysine2.png',
-             '../assets/images/lysine3.png']
+             '../assets/images/lysine3.png',
+             '../assets/images/lysine4.png']
 },
 {
   "name": "arginine",
@@ -171,7 +174,8 @@
   "pi": 10.76,
   "states": ['../assets/images/arginine1.png',
              '../assets/images/arginine2.png',
-             '../assets/images/arginine3.png']
+             '../assets/images/arginine3.png',
+             '../assets/images/arginine4.png']
 },
 {
   "name": "histidine",
@@ -181,5 +185,6 @@
   "pi": 7.59,
   "states": ['../assets/images/histidine1.png',
              '../assets/images/histidine2.png',
-             '../assets/images/histidine3.png']
+             '../assets/images/histidine3.png',
+             '../assets/images/histidine4.png']
 }
