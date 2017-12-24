@@ -12,3 +12,13 @@ body{
   background: url('https://surveytown.com/wp-content/uploads/2016/04/10-Examples-Of-Biased-Survey-Questions.jpg') no-repeat;
   background-size: cover;
 }
+
+
+h1 >  a{
+  color: #CCC;
+}
+
+h1 > a:hover{
+  color: #CCC;
+  text-decoration: none;
+}

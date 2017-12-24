@@ -11,13 +11,14 @@
   <body>
     <div class="container">
       <div class="row">
-          <div class="col-lg text-center">
+          <div class="col-lg">
             <div class="walk"></div>
-            <h1>Biochemistry Virtual Classroom</h1>
-            <div class="walk">
-
-            </div>
+            <h1 id="take-home">
+            <a href="index.php">Biochemistry Virtual Classroom</a>
+            </h1>
+            <div class="walk"></div>
           </div>
+
       </div>
       <div class="row">
 
