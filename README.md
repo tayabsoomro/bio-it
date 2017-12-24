@@ -45,3 +45,4 @@ The construction of this project was done with the help of following programs/pe
 2. D3js - For creating graphs and animations of titration curves.
 3. Ruby Ahmed - General help in proofreading the concepts.
 4. Dr. Scott Napper - Giving feedback and suggestions for the project.
+5. Flaviu Vadan.
