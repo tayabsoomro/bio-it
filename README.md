@@ -35,6 +35,10 @@ Change Log
 - December 4th, 2017
     - Add feedback functionality for the students to give reviews about the software.
     - Add glutamate titration curve base functionality.
+    
+- December 24th, 2017
+    - Created a new layout for the main page.
+    - Implemented a different structure for the titration curves.
 
 References
 ------------------
