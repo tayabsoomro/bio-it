@@ -1,4 +1,4 @@
-Interactive Biochemistry Module
+Biochemistry Virtual Classroom
 ==================================================
 
 This is a tool created for BMSC 200 (Biochemistry) students at the U of S to understand the concepts
