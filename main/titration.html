@@ -4,10 +4,78 @@
     <meta charset="utf-8">
     <title>Titration Curve</title>
     <link rel="stylesheet" href="./assets/css/titration.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <script src="https://d3js.org/d3.v4.min.js"></script>
   </head>
   <body>
-    <div class="titrationRender"></div>
+    <div class="container">
+      <h1>Titration Curves Example</h1>
+      <br />
+      <div class="col-lg-3"></div>
+      <div class="col-lg-6">
+        <div class="col-lg-12">
+          <form onsubmit="event.preventDefault();">
+            <div class="form-group">
+              <select class="form-control" id="aminoAcidSelect" onchange="processSelection()">
+                  <optgroup label="&#x2192; Diprotic">
+                    <option selected value="" disabled hidden>Choose an amino acid:</option>
+                      <option>Glycine</option>
+                      <option>Alanine</option>
+                      <option >Proline</option>
+                      <option>Valine</option>
+                      <option >Leucine</option>
+                      <option >Isoleucine</option>
+                      <option >Methionine</option>
+                      <option >Tryptophan</option>
+                      <option >Phenylalanine</option>
+                      <option >Serine</option>
+                      <option >Threonine</option>
+                      <option >Tyrosine</option>
+                      <option >Asparagine</option>
+                      <option >Glutamine</option>
+                      <option >Cysteine</option>
+                  </optgroup>
+                  <optgroup label="&#x2192; Triprotic">
+                      <option >Lysine</option>
+                      <option >Arginine</option>
+                      <option>Histidine</option>
+                      <option >Aspartate</option>
+                      <option>Glutamate</option>
+                  </optgroup>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-12 text-center">
+          <button class="btn btn-primary" id="btn-rev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+          <button class="btn btn-primary" id="btn-fwd"> <i class="fa fa-forward" aria-hidden="true"></i></button>
+        </div>
+      </div>
+      <div class="col-lg-3"></div>
+      <div class="col-lg-12">
+          <div class="titrationRender"></div>
+      </div>
+    </div>
     <script src="./js/titrationCurve.js"></script>
+    <script>
+
+      function processSelection(){
+
+        var diprotic = ['Glycine', 'Alanine', 'Proline', 'Valine', 'Leucine',
+                        'Isoleucine', 'Methionine', 'Tryptophan', 'Phenylalanine',
+                        'Serine', 'Threonine', 'Tyrosine', 'Asparagine', 'Glutamine',
+                        'Cysteine'];
+        var triprotic = ['Lysine', 'Arginine', 'Histidine', 'Aspartate', 'Glutamate'];
+
+        var selection = document.getElementById('aminoAcidSelect').value;
+
+        if(diprotic.includes(selection)){
+          drawDiprotic(selection);
+        } else if(triprotic.includes(selection)){
+          drawTriprotic(selection);
+        }
+      }
+    </script>
   </body>
 </html>
