@@ -3,225 +3,165 @@
   "carboxyl_pka": 2.34,
   "amino_pka": 9.6,
   "pi": 5.97,
-<<<<<<< HEAD
+
   "states": ["../assets/images/g1.png",
              "../assets/images/g2.png",
              "../assets/images/g3.png"]
-=======
-  "states": ["../assets/images/glycine1.png",
-             "../assets/images/glycine2.png",
-             "../assets/images/glycine3.png"]
->>>>>>> deca6a15cf7a907d7e4acab4a461dc5f8fa5ae49
+
 },
 {
   "name": "alanine",
   "carboxyl_pka": 2.34,
   "amino_pka": 9.69,
   "pi": 6.00,
-<<<<<<< HEAD
+
   "states": ["../assets/images/a1.png",
              "../assets/images/a2.png",
              "../assets/images/a3.png"]
-=======
-  "states": ["../assets/images/alanine1.png",
-             "../assets/images/alanine2.png",
-             "../assets/images/alanine3.png"]
->>>>>>> deca6a15cf7a907d7e4acab4a461dc5f8fa5ae49
+
 },
 {
   "name": "valine",
   "carboxyl_pka": 2.32,
   "amino_pka": 9.62,
   "pi": 5.96,
-<<<<<<< HEAD
+
   "states": ["../assets/images/v1.png",
              "../assets/images/v2.png",
              "../assets/images/v3.png"]
-=======
-  "states": ["../assets/images/valine1.png",
-             "../assets/images/valine2.png",
-             "../assets/images/valine3.png"]
->>>>>>> deca6a15cf7a907d7e4acab4a461dc5f8fa5ae49
+
 },
 {
   "name": "leucine",
   "carboxyl_pka": 2.36,
   "amino_pka": 9.60,
   "pi": 5.98,
-<<<<<<< HEAD
+
   "states": ["../assets/images/l1.png",
              "../assets/images/l2.png",
              "../assets/images/l3.png"]
-=======
-  "states": ["../assets/images/leucine1.png",
-             "../assets/images/leucine2.png",
-             "../assets/images/leucine3.png"]
->>>>>>> deca6a15cf7a907d7e4acab4a461dc5f8fa5ae49
+
 },
 {
   "name": "isoleucine",
   "carboxyl_pka": 2.36,
   "amino_pka": 9.6,
   "pi": 6.02,
-<<<<<<< HEAD
+
   "states": ["../assets/images/i1.png",
              "../assets/images/i2.png",
              "../assets/images/i3.png"]
-=======
-  "states": ["../assets/images/isoleucine1.png",
-             "../assets/images/isoleucine2.png",
-             "../assets/images/isoleucine3.png"]
->>>>>>> deca6a15cf7a907d7e4acab4a461dc5f8fa5ae49
+
 },
 {
   "name": "methionine",
   "carboxyl_pka": 2.28,
   "amino_pka": 9.21,
   "pi": 5.74,
-<<<<<<< HEAD
+
   "states": ["../assets/images/m1.png",
              "../assets/images/m2.png",
              "../assets/images/m3.png"]
-=======
-  "states": ["../assets/images/methionine1.png",
-             "../assets/images/methionine2.png",
-             "../assets/images/methionine3.png"]
->>>>>>> deca6a15cf7a907d7e4acab4a461dc5f8fa5ae49
+
 },
 {
   "name": "proline",
   "carboxyl_pka": 1.99,
   "amino_pka": 10.60,
   "pi": 6.30,
-<<<<<<< HEAD
+
   "states": ["../assets/images/p1.png",
              "../assets/images/p2.png",
              "../assets/images/p3.png"]
-=======
-  "states": ["../assets/images/proline1.png",
-             "../assets/images/proline2.png",
-             "../assets/images/proline3.png"]
->>>>>>> deca6a15cf7a907d7e4acab4a461dc5f8fa5ae49
+
 },
 {
   "name": "phenylalanine",
   "carboxyl_pka": 1.83,
   "amino_pka": 9.13,
   "pi": 5.48,
-<<<<<<< HEAD
+
   "states": ["../assets/images/f1.png",
              "../assets/images/f2.png",
              "../assets/images/f3.png"]
-=======
-  "states": ["../assets/images/phenylalanine1.png",
-             "../assets/images/phenylalanine2.png",
-             "../assets/images/phenylalanine3.png"]
->>>>>>> deca6a15cf7a907d7e4acab4a461dc5f8fa5ae49
+
 },
 {
   "name": "tryptophan",
   "carboxyl_pka": 2.83,
   "amino_pka": 9.39,
   "pi": 5.89,
-<<<<<<< HEAD
+
   "states": ["../assets/images/w1.png",
              "../assets/images/w2.png",
              "../assets/images/w3.png"]
-=======
-  "states": ["../assets/images/tryptophan1.png",
-             "../assets/images/tryptophan2.png",
-             "../assets/images/tryptophan3.png"]
->>>>>>> deca6a15cf7a907d7e4acab4a461dc5f8fa5ae49
+
 },
 {
   "name": "asparagine",
   "carboxyl_pka": 2.02,
   "amino_pka": 8.80,
   "pi": 5.41,
-<<<<<<< HEAD
+
   "states": ["../assets/images/n1.png",
              "../assets/images/n2.png",
              "../assets/images/n3.png"]
-=======
-  "states": ["../assets/images/asparagine.png",
-             "../assets/images/asparagine.png",
-             "../assets/images/asparagine.png"]
->>>>>>> deca6a15cf7a907d7e4acab4a461dc5f8fa5ae49
+
 },
 {
   "name": "glutamine",
   "carboxyl_pka": 2.17,
   "amino_pka": 9.13,
   "pi": 5.65,
-<<<<<<< HEAD
+
   "states": ["../assets/images/q1.png",
              "../assets/images/q2.png",
              "../assets/images/q3.png"]
-=======
-  "states": ["../assets/images/glutamine1.png",
-             "../assets/images/glutamine2.png",
-             "../assets/images/glutamine3.png"]
->>>>>>> deca6a15cf7a907d7e4acab4a461dc5f8fa5ae49
+
 },
 {
   "name": "serine",
   "carboxyl_pka": 2.21,
   "amino_pka": 9.15,
   "pi": 5.68,
-<<<<<<< HEAD
+
   "states": ["../assets/images/s1.png",
              "../assets/images/s2.png",
              "../assets/images/s3.png"]
-=======
-  "states": ["../assets/images/serine1.png",
-             "../assets/images/serine2.png",
-             "../assets/images/serine3.png"]
->>>>>>> deca6a15cf7a907d7e4acab4a461dc5f8fa5ae49
+
 },
 {
   "name": "threonine",
   "carboxyl_pka": 2.09,
   "amino_pka": 9.10,
   "pi": 5.60,
-<<<<<<< HEAD
+
   "states": ["../assets/images/t1.png",
              "../assets/images/t2.png",
              "../assets/images/t3.png"]
-=======
-  "states": ["../assets/images/threonine1.png",
-             "../assets/images/threonine2.png",
-             "../assets/images/threonine3.png"]
->>>>>>> deca6a15cf7a907d7e4acab4a461dc5f8fa5ae49
+
 },
 {
   "name": "tyrosine",
   "carboxyl_pka": 2.20,
   "amino_pka": 9.11,
   "pi": 5.66,
-<<<<<<< HEAD
+
   "states": ["../assets/images/y1.png",
              "../assets/images/y2.png",
              "../assets/images/y2.png"]
-=======
-  "states": ["../assets/images/tyrosine1.png",
-             "../assets/images/tyrosine2.png",
-             "../assets/images/tyrosine3.png"]
->>>>>>> deca6a15cf7a907d7e4acab4a461dc5f8fa5ae49
+
 },
 {
   "name": "cysteine",
   "carboxyl_pka": 1.96,
   "amino_pka": 8.18,
   "pi": 5.07,
-<<<<<<< HEAD
+
   "states": ["../assets/images/c1.png",
              "../assets/images/c2.png",
              "../assets/images/c3.png"]
-=======
-  "states": ["../assets/images/cysteine1.png",
-             "../assets/images/cysteine2.png",
-             "../assets/images/cysteine3.png"]
->>>>>>> deca6a15cf7a907d7e4acab4a461dc5f8fa5ae49
+
 },
 {
   "name": "aspartate",
@@ -229,17 +169,13 @@
   "amino_pka": 9.60,
   "side_pka": 3.65,
   "pi": 2.77,
-<<<<<<< HEAD
+
   "states": ["../assets/images/d1.png",
              "../assets/images/d2.png",
              "../assets/images/d3.png",
              "../assets/images/d4.png"]
-=======
-  "states": ["../assets/images/aspartate1.png",
-             "../assets/images/aspartate2.png",
-             "../assets/images/aspartate3.png",
-             "../assets/images/aspartate.png"]
->>>>>>> deca6a15cf7a907d7e4acab4a461dc5f8fa5ae49
+
+
 },
 {
   "name": "glutamate",
@@ -247,17 +183,13 @@
   "amino_pka": 9.67,
   "side_pka": 4.25,
   "pi": 3.22,
-<<<<<<< HEAD
+
   "states": ["../assets/images/e1.png",
              "../assets/images/e2.png",
              "../assets/images/e3.png",
              "../assets/images/e4.png"]
-=======
-  "states": ["../assets/images/glutamate1.png",
-             "../assets/images/glutamate2.png",
-             "../assets/images/glutamate3.png",
-             "../assets/images/glutamate4.png"]
->>>>>>> deca6a15cf7a907d7e4acab4a461dc5f8fa5ae49
+
+
 },
 {
   "name": "lysine",
@@ -265,17 +197,13 @@
   "amino_pka": 8.95,
   "side_pka": 10.53,
   "pi": 9.74,
-<<<<<<< HEAD
+
   "states": ["../assets/images/k1.png",
              "../assets/images/k2.png",
              "../assets/images/k3.png",
              "../assets/images/k4.png"]
-=======
-  "states": ["../assets/images/lysine1.png",
-             "../assets/images/lysine2.png",
-             "../assets/images/lysine3.png",
-             "../assets/images/lysine4.png"]
->>>>>>> deca6a15cf7a907d7e4acab4a461dc5f8fa5ae49
+
+
 },
 {
   "name": "arginine",
@@ -283,17 +211,13 @@
   "amino_pka": 9.04,
   "side_pka": 12.48,
   "pi": 10.76,
-<<<<<<< HEAD
+
   "states": ["../assets/images/r1.png",
              "../assets/images/r2.png",
              "../assets/images/r3.png",
              "../assets/images/r4.png"]
-=======
-  "states": ["../assets/images/arginine1.png",
-             "../assets/images/arginine2.png",
-             "../assets/images/arginine3.png",
-             "../assets/images/arginine4.png"]
->>>>>>> deca6a15cf7a907d7e4acab4a461dc5f8fa5ae49
+
+
 },
 {
   "name": "histidine",
@@ -301,15 +225,11 @@
   "amino_pka": 9.17,
   "side_pka": 6.00,
   "pi": 7.59,
-<<<<<<< HEAD
+
   "states": ["../assets/images/h1.png",
              "../assets/images/h2.png",
              "../assets/images/h3.png",
              "../assets/images/h4.png"]
-=======
-  "states": ["../assets/images/histidine1.png",
-             "../assets/images/histidine2.png",
-             "../assets/images/histidine3.png",
-             "../assets/images/histidine4.png"]
->>>>>>> deca6a15cf7a907d7e4acab4a461dc5f8fa5ae49
+
+
 }]
