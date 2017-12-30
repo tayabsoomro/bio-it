@@ -117,6 +117,31 @@ function drawDiproticData(amino_acid){
               "translate(" + x(diprotic_pi_pos[0]) + ","
                            + y(diprotic_pi_pos[1]) + ") rotate(-45)")
         .text(aa_data.pi + " (pI)");
+
+    svg.append("svg:image")
+      .attr("xlink:href", "./assets/images/" + aa_data.code + "1.png")
+      .attr("class","state1")
+      .attr("x", x(diprotic_carboxyl_pka_pos[0]))
+      .attr("y", 0)
+      .attr("height", 100)
+      .attr("width", 100);
+
+    svg.append("svg:image")
+      .attr("xlink:href", "./assets/images/" + aa_data.code + "2.png")
+      .attr("class","state2")
+      .attr("x", x(diprotic_pi_pos[0]))
+      .attr("y", 0)
+      .attr("height", 100)
+      .attr("width", 100);
+
+    svg.append("svg:image")
+      .attr("xlink:href", "./assets/images/" + aa_data.code + "3.png")
+      .attr("class","state3")
+      .attr("x", x(diprotic_amino_pka_pos[0]))
+      .attr("y", 0)
+      .attr("height", 100)
+      .attr("width", 100);
+
   });
 }
 
@@ -183,7 +208,8 @@ function drawTriproticData(amino_acid){
 
     var aa_data = findFirstMatchedObjInArray('name', amino_acid.toLowerCase(), data);
 
-    if(amino_acid === "Arginine" || amino_acid === "Lysine"){
+
+    if(amino_acid === "Histidine"){ //odd case 1
       svg.append("text")
           .attr("class", "carboxyl_pka")
           .attr("x", x(triprotic_carboxyl_pka_pos[0]))
@@ -191,13 +217,13 @@ function drawTriproticData(amino_acid){
           .text(aa_data.carboxyl_pka);
       svg.append("text")
           .attr("class", "side_pka")
-          .attr("x", x(triprotic_amino_pka_pos[0]))
-          .attr("y", y(triprotic_amino_pka_pos[1]))
+          .attr("x", x(triprotic_side_pka_pos[0]))
+          .attr("y", y(triprotic_side_pka_pos[1]))
           .text(aa_data.side_pka);
       svg.append("text")
           .attr("class", "amino_pka")
-          .attr("x", x(triprotic_side_pka_pos[0]))
-          .attr("y", y(triprotic_side_pka_pos[1]))
+          .attr("x", x(triprotic_amino_pka_pos[0]))
+          .attr("y", y(triprotic_amino_pka_pos[1]))
           .text(aa_data.amino_pka);
       svg.append("text")
           .attr("class", "isoelectric_point")
@@ -205,28 +231,153 @@ function drawTriproticData(amino_acid){
                 "translate(" + x(triprotic_pi_pos_odd[0]) + ","
                              + y(triprotic_pi_pos_odd[1]) + ") rotate(-67)")
           .text(aa_data.pi + " (pI)");
-    } else{
-      svg.append("text")
-          .attr("class", "carboxyl_pka")
+
+    } else if(amino_acid === "Arginine" || amino_acid === "Lysine"){ //odd case 2
+        svg.append("text")
+            .attr("class", "carboxyl_pka")
+            .attr("x", x(triprotic_carboxyl_pka_pos[0]))
+            .attr("y", y(triprotic_carboxyl_pka_pos[1]))
+            .text(aa_data.carboxyl_pka);
+        svg.append("text")
+            .attr("class", "side_pka")
+            .attr("x", x(triprotic_amino_pka_pos[0]))
+            .attr("y", y(triprotic_amino_pka_pos[1]))
+            .text(aa_data.side_pka);
+        svg.append("text")
+            .attr("class", "amino_pka")
+            .attr("x", x(triprotic_side_pka_pos[0]))
+            .attr("y", y(triprotic_side_pka_pos[1]))
+            .text(aa_data.amino_pka);
+        svg.append("text")
+            .attr("class", "isoelectric_point")
+            .attr("transform",
+                  "translate(" + x(triprotic_pi_pos_odd[0]) + ","
+                               + y(triprotic_pi_pos_odd[1]) + ") rotate(-67)")
+            .text(aa_data.pi + " (pI)");
+
+    } else { //normal case
+        svg.append("text")
+            .attr("class", "carboxyl_pka")
+            .attr("x", x(triprotic_carboxyl_pka_pos[0]))
+            .attr("y", y(triprotic_carboxyl_pka_pos[1]))
+            .text(aa_data.carboxyl_pka);
+        svg.append("text")
+            .attr("class", "amino_pka")
+            .attr("x", x(triprotic_amino_pka_pos[0]))
+            .attr("y", y(triprotic_amino_pka_pos[1]))
+            .text(aa_data.amino_pka);
+        svg.append("text")
+            .attr("class", "side_pka")
+            .attr("x", x(triprotic_side_pka_pos[0]))
+            .attr("y", y(triprotic_side_pka_pos[1]))
+            .text(aa_data.side_pka);
+        svg.append("text")
+            .attr("class", "isoelectric_point")
+            .attr("transform",
+                  "translate(" + x(triprotic_pi_pos[0]) + ","
+                               + y(triprotic_pi_pos[1]) + ") rotate(-67)")
+            .text(aa_data.pi + " (pI)");
+      }
+
+      if(aa_data.code === "h"){ //odd case 1
+        svg.append("svg:image")
+          .attr("xlink:href", "./assets/images/" + aa_data.code + "1.png")
+          .attr("class","state1")
           .attr("x", x(triprotic_carboxyl_pka_pos[0]))
-          .attr("y", y(triprotic_carboxyl_pka_pos[1]))
-          .text(aa_data.carboxyl_pka);
-      svg.append("text")
-          .attr("class", "amino_pka")
-          .attr("x", x(triprotic_amino_pka_pos[0]))
-          .attr("y", y(triprotic_amino_pka_pos[1]))
-          .text(aa_data.amino_pka);
-      svg.append("text")
-          .attr("class", "side_pka")
+          .attr("y", 0)
+          .attr("height", 100)
+          .attr("width", 100);
+
+        svg.append("svg:image")
+          .attr("xlink:href", "./assets/images/" + aa_data.code + "2.png")
+          .attr("class","state3")
           .attr("x", x(triprotic_side_pka_pos[0]))
-          .attr("y", y(triprotic_side_pka_pos[1]))
-          .text(aa_data.side_pka);
-      svg.append("text")
-          .attr("class", "isoelectric_point")
-          .attr("transform",
-                "translate(" + x(triprotic_pi_pos[0]) + ","
-                             + y(triprotic_pi_pos[1]) + ") rotate(-67)")
-          .text(aa_data.pi + " (pI)");
-    }
-  });
-}
+          .attr("y", 0)
+          .attr("height", 100)
+          .attr("width", 100);
+
+        svg.append("svg:image")
+          .attr("xlink:href", "./assets/images/" + aa_data.code + "3.png")
+          .attr("class","state2")
+          .attr("x", x(triprotic_pi_pos_odd[0]))
+          .attr("y", 0)
+          .attr("height", 100)
+          .attr("width", 100);
+
+        svg.append("svg:image")
+          .attr("xlink:href", "./assets/images/" + aa_data.code + "4.png")
+          .attr("class","state4")
+          .attr("x", x(triprotic_amino_pka_pos[0]))
+          .attr("y", 0)
+          .attr("height", 100)
+          .attr("width", 100);
+      } else if (amino_acid != "Lysine" && aa_data.code != "r"){ //normal case
+        console.log("ELSE IF NORMAL CASE");
+        svg.append("svg:image")
+          .attr("xlink:href", "./assets/images/" + aa_data.code + "1.png")
+          .attr("class","state1")
+          .attr("x", x(triprotic_carboxyl_pka_pos[0]))
+          .attr("y", 0)
+          .attr("height", 100)
+          .attr("width", 100);
+
+        svg.append("svg:image")
+          .attr("xlink:href", "./assets/images/" + aa_data.code + "2.png")
+          .attr("class","state2")
+          .attr("x", x(triprotic_pi_pos[0]))
+          .attr("y", 0)
+          .attr("height", 100)
+          .attr("width", 100);
+
+        svg.append("svg:image")
+          .attr("xlink:href", "./assets/images/" + aa_data.code + "3.png")
+          .attr("class","state3")
+          .attr("x", x(triprotic_side_pka_pos[0]))
+          .attr("y", 0)
+          .attr("height", 100)
+          .attr("width", 100);
+
+        svg.append("svg:image")
+          .attr("xlink:href", "./assets/images/" + aa_data.code + "4.png")
+          .attr("class","state4")
+          .attr("x", x(triprotic_amino_pka_pos[0]))
+          .attr("y", 0)
+          .attr("height", 100)
+          .attr("width", 100);
+      } else{ //odd case 2
+        console.log("ODD CASE 2 ELSE ");
+        svg.append("svg:image")
+          .attr("xlink:href", "./assets/images/" + aa_data.code + "1.png")
+          .attr("class","state1")
+          .attr("x", x(triprotic_carboxyl_pka_pos[0]))
+          .attr("y", 0)
+          .attr("height", 100)
+          .attr("width", 100);
+
+          svg.append("svg:image")
+            .attr("xlink:href", "./assets/images/" + aa_data.code + "3.png")
+            .attr("class","state3")
+            .attr("x", x(triprotic_pi_pos_odd[0]))
+            .attr("y", 0)
+            .attr("height", 100)
+            .attr("width", 100);
+
+        svg.append("svg:image")
+          .attr("xlink:href", "./assets/images/" + aa_data.code + "4.png")
+          .attr("class","state2")
+          .attr("x", x(triprotic_amino_pka_pos[0]))
+          .attr("y", 0)
+          .attr("height", 100)
+          .attr("width", 100);
+
+        svg.append("svg:image")
+          .attr("xlink:href", "./assets/images/" + aa_data.code + "2.png")
+          .attr("class","state4")
+          .attr("x", x(triprotic_side_pka_pos[0]))
+          .attr("y", 0)
+          .attr("height", 100)
+          .attr("width", 100);
+      }
+
+    });
+  }
