@@ -39,7 +39,7 @@
         </div>
         <div class="walk" style="width: 50px;"></div>
         <div class="card" style="width: 20rem;">
-          <a href="./titration.php"><img class="card-img-top" src="https://badginglabskills.files.wordpress.com/2016/10/titration-badge-uoe.png" alt="Card image cap"></a>
+          <a href="./titration.html"><img class="card-img-top" src="https://badginglabskills.files.wordpress.com/2016/10/titration-badge-uoe.png" alt="Card image cap"></a>
           <div class="card-body">
             <h4 class="card-title">Titration Curves</h4>
             <p class="card-text">Watch the step-by-step animation of titration curves of the 20 amino acids.</p>

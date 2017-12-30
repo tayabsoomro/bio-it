@@ -4,9 +4,9 @@
   "carboxyl_pka": 2.34,
   "amino_pka": 9.6,
   "pi": 5.97,
-  "states": ["../assets/images/g1.png",
-             "../assets/images/g2.png",
-             "../assets/images/g3.png"]
+  "states": ["../assets/titration-images/g1.png",
+             "../assets/titration-images/g2.png",
+             "../assets/titration-images/g3.png"]
 },
 {
   "name": "alanine",
@@ -14,9 +14,9 @@
   "carboxyl_pka": 2.34,
   "amino_pka": 9.69,
   "pi": 6.00,
-  "states": ["../assets/images/a1.png",
-             "../assets/images/a2.png",
-             "../assets/images/a3.png"]
+  "states": ["../assets/titration-images/a1.png",
+             "../assets/titration-images/a2.png",
+             "../assets/titration-images/a3.png"]
 },
 {
   "name": "valine",
@@ -24,9 +24,9 @@
   "carboxyl_pka": 2.32,
   "amino_pka": 9.62,
   "pi": 5.96,
-  "states": ["../assets/images/v1.png",
-             "../assets/images/v2.png",
-             "../assets/images/v3.png"]
+  "states": ["../assets/titration-images/v1.png",
+             "../assets/titration-images/v2.png",
+             "../assets/titration-images/v3.png"]
 },
 {
   "name": "leucine",
@@ -34,9 +34,9 @@
   "carboxyl_pka": 2.36,
   "amino_pka": 9.60,
   "pi": 5.98,
-  "states": ["../assets/images/l1.png",
-             "../assets/images/l2.png",
-             "../assets/images/l3.png"]
+  "states": ["../assets/titration-images/l1.png",
+             "../assets/titration-images/l2.png",
+             "../assets/titration-images/l3.png"]
 },
 {
   "name": "isoleucine",
@@ -44,9 +44,9 @@
   "carboxyl_pka": 2.36,
   "amino_pka": 9.6,
   "pi": 6.02,
-  "states": ["../assets/images/i1.png",
-             "../assets/images/i2.png",
-             "../assets/images/i3.png"]
+  "states": ["../assets/titration-images/i1.png",
+             "../assets/titration-images/i2.png",
+             "../assets/titration-images/i3.png"]
 },
 {
   "name": "methionine",
@@ -54,9 +54,9 @@
   "carboxyl_pka": 2.28,
   "amino_pka": 9.21,
   "pi": 5.74,
-  "states": ["../assets/images/m1.png",
-             "../assets/images/m2.png",
-             "../assets/images/m3.png"]
+  "states": ["../assets/titration-images/m1.png",
+             "../assets/titration-images/m2.png",
+             "../assets/titration-images/m3.png"]
 },
 {
   "name": "proline",
@@ -64,9 +64,9 @@
   "carboxyl_pka": 1.99,
   "amino_pka": 10.60,
   "pi": 6.30,
-  "states": ["../assets/images/p1.png",
-             "../assets/images/p2.png",
-             "../assets/images/p3.png"]
+  "states": ["../assets/titration-images/p1.png",
+             "../assets/titration-images/p2.png",
+             "../assets/titration-images/p3.png"]
 },
 {
   "name": "phenylalanine",
@@ -74,9 +74,9 @@
   "carboxyl_pka": 1.83,
   "amino_pka": 9.13,
   "pi": 5.48,
-  "states": ["../assets/images/f1.png",
-             "../assets/images/f2.png",
-             "../assets/images/f3.png"]
+  "states": ["../assets/titration-images/f1.png",
+             "../assets/titration-images/f2.png",
+             "../assets/titration-images/f3.png"]
 },
 {
   "name": "tryptophan",
@@ -84,9 +84,9 @@
   "carboxyl_pka": 2.83,
   "amino_pka": 9.39,
   "pi": 5.89,
-  "states": ["../assets/images/w1.png",
-             "../assets/images/w2.png",
-             "../assets/images/w3.png"]
+  "states": ["../assets/titration-images/w1.png",
+             "../assets/titration-images/w2.png",
+             "../assets/titration-images/w3.png"]
 },
 {
   "name": "asparagine",
@@ -94,9 +94,9 @@
   "carboxyl_pka": 2.02,
   "amino_pka": 8.80,
   "pi": 5.41,
-  "states": ["../assets/images/n1.png",
-             "../assets/images/n2.png",
-             "../assets/images/n3.png"]
+  "states": ["../assets/titration-images/n1.png",
+             "../assets/titration-images/n2.png",
+             "../assets/titration-images/n3.png"]
 },
 {
   "name": "glutamine",
@@ -104,9 +104,9 @@
   "carboxyl_pka": 2.17,
   "amino_pka": 9.13,
   "pi": 5.65,
-  "states": ["../assets/images/q1.png",
-             "../assets/images/q2.png",
-             "../assets/images/q3.png"]
+  "states": ["../assets/titration-images/q1.png",
+             "../assets/titration-images/q2.png",
+             "../assets/titration-images/q3.png"]
 },
 {
   "name": "serine",
@@ -114,9 +114,9 @@
   "carboxyl_pka": 2.21,
   "amino_pka": 9.15,
   "pi": 5.68,
-  "states": ["../assets/images/s1.png",
-             "../assets/images/s2.png",
-             "../assets/images/s3.png"]
+  "states": ["../assets/titration-images/s1.png",
+             "../assets/titration-images/s2.png",
+             "../assets/titration-images/s3.png"]
 },
 {
   "name": "threonine",
@@ -124,9 +124,9 @@
   "carboxyl_pka": 2.09,
   "amino_pka": 9.10,
   "pi": 5.60,
-  "states": ["../assets/images/t1.png",
-             "../assets/images/t2.png",
-             "../assets/images/t3.png"]
+  "states": ["../assets/titration-images/t1.png",
+             "../assets/titration-images/t2.png",
+             "../assets/titration-images/t3.png"]
 },
 {
   "name": "tyrosine",
@@ -134,9 +134,9 @@
   "carboxyl_pka": 2.20,
   "amino_pka": 9.11,
   "pi": 5.66,
-  "states": ["../assets/images/y1.png",
-             "../assets/images/y2.png",
-             "../assets/images/y2.png"]
+  "states": ["../assets/titration-images/y1.png",
+             "../assets/titration-images/y2.png",
+             "../assets/titration-images/y2.png"]
 },
 {
   "name": "cysteine",
@@ -144,9 +144,9 @@
   "carboxyl_pka": 1.96,
   "amino_pka": 8.18,
   "pi": 5.07,
-  "states": ["../assets/images/c1.png",
-             "../assets/images/c2.png",
-             "../assets/images/c3.png"]
+  "states": ["../assets/titration-images/c1.png",
+             "../assets/titration-images/c2.png",
+             "../assets/titration-images/c3.png"]
 },
 {
   "name": "aspartate",
@@ -155,10 +155,10 @@
   "amino_pka": 9.60,
   "side_pka": 3.65,
   "pi": 2.77,
-  "states": ["../assets/images/d1.png",
-             "../assets/images/d2.png",
-             "../assets/images/d3.png",
-             "../assets/images/d4.png"]
+  "states": ["../assets/titration-images/d1.png",
+             "../assets/titration-images/d2.png",
+             "../assets/titration-images/d3.png",
+             "../assets/titration-images/d4.png"]
 },
 {
   "name": "glutamate",
@@ -167,10 +167,10 @@
   "amino_pka": 9.67,
   "side_pka": 4.25,
   "pi": 3.22,
-  "states": ["../assets/images/e1.png",
-             "../assets/images/e2.png",
-             "../assets/images/e3.png",
-             "../assets/images/e4.png"]
+  "states": ["../assets/titration-images/e1.png",
+             "../assets/titration-images/e2.png",
+             "../assets/titration-images/e3.png",
+             "../assets/titration-images/e4.png"]
 },
 {
   "name": "lysine",
@@ -179,10 +179,10 @@
   "amino_pka": 8.95,
   "side_pka": 10.53,
   "pi": 9.74,
-  "states": ["../assets/images/k1.png",
-             "../assets/images/k2.png",
-             "../assets/images/k3.png",
-             "../assets/images/k4.png"]
+  "states": ["../assets/titration-images/k1.png",
+             "../assets/titration-images/k2.png",
+             "../assets/titration-images/k3.png",
+             "../assets/titration-images/k4.png"]
 },
 {
   "name": "arginine",
@@ -191,10 +191,10 @@
   "amino_pka": 9.04,
   "side_pka": 12.48,
   "pi": 10.76,
-  "states": ["../assets/images/r1.png",
-             "../assets/images/r2.png",
-             "../assets/images/r3.png",
-             "../assets/images/r4.png"]
+  "states": ["../assets/titration-images/r1.png",
+             "../assets/titration-images/r2.png",
+             "../assets/titration-images/r3.png",
+             "../assets/titration-images/r4.png"]
 },
 {
   "name": "histidine",
@@ -203,8 +203,8 @@
   "amino_pka": 9.17,
   "side_pka": 6.00,
   "pi": 7.59,
-  "states": ["../assets/images/h1.png",
-             "../assets/images/h2.png",
-             "../assets/images/h3.png",
-             "../assets/images/h4.png"]
+  "states": ["../assets/titration-images/h1.png",
+             "../assets/titration-images/h2.png",
+             "../assets/titration-images/h3.png",
+             "../assets/titration-images/h4.png"]
 }]

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Titration Curve</title>
+    <link rel="stylesheet" href="./assets/css/titration.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="container">
+    <h1 class="text-center">Amino Acids</h1>
+    <br />
+    <br />
+
+    <div class="row">
+      <div class="col-lg-3"></div>
+      <div id="cardButton" class="col-lg-6 card"><div id="cardText" class="card-body lead text-center"></div></div>
+      <div class="col-lg-3"></div>
+    </div>
+
+    <br />
+    <br />
+    <p align="center">
+        <button class="btn btn-light" id="prevCard" onclick="cardsHandle.cardMove(-1);"><i class="fa fa-backward" aria-hidden="true"></i></button>
+        <span id="positionIndex">0/0</span>
+        <button class="btn btn-light" id="nextCard"onclick="cardsHandle.cardMove(1);"><i class="fa fa-forward" aria-hidden="true"></i></button>
+    </p>
+
+    <script>
+
+        var aminoAcids = [{
+          "name": "Glycine",
+          "code": ["Gly", "G"]
+        },
+        {
+          "name": "Alanine",
+          "code": ["Ala", "A"]
+        },
+        {
+          "name": "Valine",
+          "code": ["Val", "V"]
+        },
+        {
+          "name": "Leucine",
+          "code": ["Leu", "L"]
+        },
+        {
+          "name": "Isoleucine",
+          "code": ["Ile", "I"]
+        },
+        {
+          "name": "Methionine",
+          "code": ["Met", "M"]
+        },
+        {
+          "name": "Proline",
+          "code": ["Pro", "P"]
+        },
+        {
+          "name": "Phenylalanine",
+          "code": ["Phe", "F"]
+        },
+        {
+          "name": "Tryptophan",
+          "code": ["Trp", "W"]
+        },
+        {
+          "name": "Asparagine",
+          "code": ["Asn", "N"]
+        },
+        {
+          "name": "glutamine",
+          "code": ["Glu","Q"]
+        },
+        {
+          "name": "serine",
+          "code": ["Ser","S"]
+        },
+        {
+          "name": "threonine",
+          "code": ["Thr","T"]
+        },
+        {
+          "name": "tyrosine",
+          "code": ["Tyr","Y"]
+        },
+        {
+          "name": "cysteine",
+          "code": ["Cys","C"]
+        },
+        {
+          "name": "aspartate",
+          "code": ["Asp","D"]
+        },
+        {
+          "name": "glutamate",
+          "code": ["Glu","E"]
+        },
+        {
+          "name": "lysine",
+          "code": ["Lys","K"]
+        },
+        {
+          "name": "arginine",
+          "code": ["Arg","R"]
+        },
+        {
+          "name": "histidine",
+          "code": ["His","H"]
+        }];
+
+
+        String.prototype.isEmpty = function() {// Returns if a string has only whitespace
+            return (this.length === 0 || !this.trim());
+        };
+
+        function Card(front, back){
+            /*A card is just a container that holds a front and back value!
+                - You can get either back or front by displaying it*/
+            this.frontVal = front;
+            this.backVal = back;
+
+            this.display = function(side){
+                if( side === 0 ){
+                    return this.frontVal;
+                }else{
+                    return this.backVal;
+                }
+            };
+        }
+
+        var cardsHandle = {
+            cards: [],
+            cardInd: 0,
+            cardButton: document.getElementById("cardButton"),
+            cardText: document.getElementById("cardText"),
+            cardTPosition: document.getElementById("positionIndex"),
+            cardSide: 0,
+
+            cardAdd: function(back, front){
+                this.cards.push( new Card(back, front) );
+            },
+            cardUpdate: function(){
+                var curCard = this.cards[ this.cardInd ];
+                this.cardText.innerHTML = curCard.display( this.cardSide );
+                this.cardTPosition.innerHTML = (this.cardInd+1)+"/"+this.cards.length;
+            },
+            cardFlip: function(){
+                this.cardSide = (this.cardSide + 1) % 2; //make sure user does not pass 2
+            },
+            cardMove: function(moveBy){
+                this.cardInd += moveBy;
+                if( this. cardInd < 0 ){
+                    this.cardInd += this.cards.length; //not allowed to have negative index
+                }
+                this.cardInd = this.cardInd % this.cards.length; //make sure user does not pass 10
+
+                this.cardSide = 0;// Set back to front
+                this.cardUpdate();
+            },
+            cardTap: function(){
+                this.cardFlip();
+                this.cardUpdate();// Display card
+            }
+        };
+
+        //add each amino acid to deck
+        for (var aa_i = 0; aa_i < aminoAcids.length; aa_i++) {
+          cardsHandle.cardAdd(aminoAcids[aa_i].name, aminoAcids[aa_i].code);
+        }
+
+        cardsHandle.cardUpdate();
+
+        var userEnter = function(){
+            var nFront = document.getElementById("newFront"),
+                nBack = document.getElementById("newBack");
+
+            if( nFront.value.isEmpty() || nBack.value.isEmpty() )
+                return;
+
+            cardsHandle.cardAdd(nFront.value,nBack.value);
+            nFront.value="";
+            nBack.value="";
+            cardsHandle.cardUpdate();
+        }
+
+        cardsHandle.cardButton.addEventListener('click', function(){ cardsHandle.cardTap();} );
+
+    </script>
+  </body>
+</html>

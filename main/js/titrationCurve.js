@@ -119,7 +119,7 @@ function drawDiproticData(amino_acid){
         .text(aa_data.pi + " (pI)");
 
     svg.append("svg:image")
-      .attr("xlink:href", "./assets/images/" + aa_data.code + "1.png")
+      .attr("xlink:href", "./assets/titration-images/" + aa_data.code + "1.png")
       .attr("class","state1")
       .attr("x", x(diprotic_carboxyl_pka_pos[0]))
       .attr("y", 0)
@@ -127,7 +127,7 @@ function drawDiproticData(amino_acid){
       .attr("width", 100);
 
     svg.append("svg:image")
-      .attr("xlink:href", "./assets/images/" + aa_data.code + "2.png")
+      .attr("xlink:href", "./assets/titration-images/" + aa_data.code + "2.png")
       .attr("class","state2")
       .attr("x", x(diprotic_pi_pos[0]))
       .attr("y", 0)
@@ -135,7 +135,7 @@ function drawDiproticData(amino_acid){
       .attr("width", 100);
 
     svg.append("svg:image")
-      .attr("xlink:href", "./assets/images/" + aa_data.code + "3.png")
+      .attr("xlink:href", "./assets/titration-images/" + aa_data.code + "3.png")
       .attr("class","state3")
       .attr("x", x(diprotic_amino_pka_pos[0]))
       .attr("y", 0)
@@ -281,7 +281,7 @@ function drawTriproticData(amino_acid){
 
       if(aa_data.code === "h"){ //odd case 1
         svg.append("svg:image")
-          .attr("xlink:href", "./assets/images/" + aa_data.code + "1.png")
+          .attr("xlink:href", "./assets/titration-images/" + aa_data.code + "1.png")
           .attr("class","state1")
           .attr("x", x(triprotic_carboxyl_pka_pos[0]))
           .attr("y", 0)
@@ -289,7 +289,7 @@ function drawTriproticData(amino_acid){
           .attr("width", 100);
 
         svg.append("svg:image")
-          .attr("xlink:href", "./assets/images/" + aa_data.code + "2.png")
+          .attr("xlink:href", "./assets/titration-images/" + aa_data.code + "2.png")
           .attr("class","state3")
           .attr("x", x(triprotic_side_pka_pos[0]))
           .attr("y", 0)
@@ -297,7 +297,7 @@ function drawTriproticData(amino_acid){
           .attr("width", 100);
 
         svg.append("svg:image")
-          .attr("xlink:href", "./assets/images/" + aa_data.code + "3.png")
+          .attr("xlink:href", "./assets/titration-images/" + aa_data.code + "3.png")
           .attr("class","state2")
           .attr("x", x(triprotic_pi_pos_odd[0]))
           .attr("y", 0)
@@ -305,7 +305,7 @@ function drawTriproticData(amino_acid){
           .attr("width", 100);
 
         svg.append("svg:image")
-          .attr("xlink:href", "./assets/images/" + aa_data.code + "4.png")
+          .attr("xlink:href", "./assets/titration-images/" + aa_data.code + "4.png")
           .attr("class","state4")
           .attr("x", x(triprotic_amino_pka_pos[0]))
           .attr("y", 0)
@@ -314,7 +314,7 @@ function drawTriproticData(amino_acid){
       } else if (amino_acid != "Lysine" && aa_data.code != "r"){ //normal case
         console.log("ELSE IF NORMAL CASE");
         svg.append("svg:image")
-          .attr("xlink:href", "./assets/images/" + aa_data.code + "1.png")
+          .attr("xlink:href", "./assets/titration-images/" + aa_data.code + "1.png")
           .attr("class","state1")
           .attr("x", x(triprotic_carboxyl_pka_pos[0]))
           .attr("y", 0)
@@ -322,7 +322,7 @@ function drawTriproticData(amino_acid){
           .attr("width", 100);
 
         svg.append("svg:image")
-          .attr("xlink:href", "./assets/images/" + aa_data.code + "2.png")
+          .attr("xlink:href", "./assets/titration-images/" + aa_data.code + "2.png")
           .attr("class","state2")
           .attr("x", x(triprotic_pi_pos[0]))
           .attr("y", 0)
@@ -330,7 +330,7 @@ function drawTriproticData(amino_acid){
           .attr("width", 100);
 
         svg.append("svg:image")
-          .attr("xlink:href", "./assets/images/" + aa_data.code + "3.png")
+          .attr("xlink:href", "./assets/titration-images/" + aa_data.code + "3.png")
           .attr("class","state3")
           .attr("x", x(triprotic_side_pka_pos[0]))
           .attr("y", 0)
@@ -338,7 +338,7 @@ function drawTriproticData(amino_acid){
           .attr("width", 100);
 
         svg.append("svg:image")
-          .attr("xlink:href", "./assets/images/" + aa_data.code + "4.png")
+          .attr("xlink:href", "./assets/titration-images/" + aa_data.code + "4.png")
           .attr("class","state4")
           .attr("x", x(triprotic_amino_pka_pos[0]))
           .attr("y", 0)
@@ -347,7 +347,7 @@ function drawTriproticData(amino_acid){
       } else{ //odd case 2
         console.log("ODD CASE 2 ELSE ");
         svg.append("svg:image")
-          .attr("xlink:href", "./assets/images/" + aa_data.code + "1.png")
+          .attr("xlink:href", "./assets/titration-images/" + aa_data.code + "1.png")
           .attr("class","state1")
           .attr("x", x(triprotic_carboxyl_pka_pos[0]))
           .attr("y", 0)
@@ -355,7 +355,7 @@ function drawTriproticData(amino_acid){
           .attr("width", 100);
 
           svg.append("svg:image")
-            .attr("xlink:href", "./assets/images/" + aa_data.code + "3.png")
+            .attr("xlink:href", "./assets/titration-images/" + aa_data.code + "3.png")
             .attr("class","state3")
             .attr("x", x(triprotic_pi_pos_odd[0]))
             .attr("y", 0)
@@ -363,7 +363,7 @@ function drawTriproticData(amino_acid){
             .attr("width", 100);
 
         svg.append("svg:image")
-          .attr("xlink:href", "./assets/images/" + aa_data.code + "4.png")
+          .attr("xlink:href", "./assets/titration-images/" + aa_data.code + "4.png")
           .attr("class","state2")
           .attr("x", x(triprotic_amino_pka_pos[0]))
           .attr("y", 0)
@@ -371,7 +371,7 @@ function drawTriproticData(amino_acid){
           .attr("width", 100);
 
         svg.append("svg:image")
-          .attr("xlink:href", "./assets/images/" + aa_data.code + "2.png")
+          .attr("xlink:href", "./assets/titration-images/" + aa_data.code + "2.png")
           .attr("class","state4")
           .attr("x", x(triprotic_side_pka_pos[0]))
           .attr("y", 0)

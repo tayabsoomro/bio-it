@@ -1,0 +1,80 @@
+[{
+  "name": "Glycine",
+  "code": ["Gly", "G"]
+},
+{
+  "name": "Alanine",
+  "code": ["Ala", "A"]
+},
+{
+  "name": "Valine",
+  "code": ["Val", "V"]
+},
+{
+  "name": "Leucine",
+  "code": ["Leu", "L"]
+},
+{
+  "name": "Isoleucine",
+  "code": ["Ile", "I"]
+},
+{
+  "name": "Methionine",
+  "code": ["Met", "M"]
+},
+{
+  "name": "Proline",
+  "code": ["Pro", "P"]
+},
+{
+  "name": "Phenylalanine",
+  "code": ["Phe", "F"]
+},
+{
+  "name": "Tryptophan",
+  "code": ["Trp", "W"]
+},
+{
+  "name": "Asparagine",
+  "code": ["Asn", "N"]
+},
+{
+  "name": "glutamine",
+  "code": ["Glu","Q"]
+},
+{
+  "name": "serine",
+  "code": ["Ser","S"]
+},
+{
+  "name": "threonine",
+  "code": ["Thr","T"]
+},
+{
+  "name": "tyrosine",
+  "code": ["Tyr","Y"]
+},
+{
+  "name": "cysteine",
+  "code": ["Cys","C"]
+},
+{
+  "name": "aspartate",
+  "code": ["Asp","D"]
+},
+{
+  "name": "glutamate",
+  "code": ["Glu","E"]
+},
+{
+  "name": "lysine",
+  "code": ["Lys","K"]
+},
+{
+  "name": "arginine",
+  "code": ["Arg","R"]
+},
+{
+  "name": "histidine",
+  "code": ["His","H"]
+}]
