@@ -13,7 +13,7 @@
           <div class="col-lg">
             <div class="walk"></div>
             <h1 id="take-home">
-            <a href="index.php">Biochemistry Virtual Classroom</a>
+            <a href="index.php">BIO-IT</a>
             </h1>
             <div class="walk"></div>
           </div>
