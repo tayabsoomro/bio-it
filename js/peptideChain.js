@@ -92,6 +92,7 @@ function generatePeptide(){
 
 }
 
+
 function validPolyPeptide(src)
 {
     restricted  = "BJOUZ";

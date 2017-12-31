@@ -2,8 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Interactive Biochemistry</title>
-
+    <title>BIO-IT - Welcome</title>
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/master.css">
@@ -23,7 +22,7 @@
       <div class="row">
 
         <div class="card text-center" style="width: 20rem;">
-          <a href="./peptides.php"><img class="card-img-top img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Peptide_bond.png" alt="Card image cap"></a>
+          <a href="./peptides.html"><img class="card-img-top img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Peptide_bond.png" alt="Card image cap"></a>
           <div class="card-body">
             <h4 class="card-title">Peptide Bonds</h4>
             <p class="card-text">Master the skill of generating and identifying peptide bonds.</p>
@@ -31,7 +30,7 @@
         </div>
         <div class="walk" style="width: 50px;"></div>
         <div class="card" style="width: 20rem;">
-          <a href="./amino-acids.php"><img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/AminoAcidball.svg/1200px-AminoAcidball.svg.png" alt="Card image cap"></a>
+          <a href="./amino-acid.html"><img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/AminoAcidball.svg/1200px-AminoAcidball.svg.png" alt="Card image cap"></a>
           <div class="card-body">
             <h4 class="card-title">Amino Acids</h4>
             <p class="card-text">Understand the functions of the 20 amino acids and memorize their primary structures.</p>
