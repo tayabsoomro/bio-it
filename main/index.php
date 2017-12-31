@@ -46,5 +46,17 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+          <br /><br />
+          <p class="lead text-light footer-section" style="font-size: 75%">
+              Created by <a href="https://github.com/vflav" class="text-light" target="_blank">Flaviu</a> and <a href="https://github.com/tayabsoomro" class="text-light"  target="_blank">Tayab</a>
+              &bull;
+              <a href="credits.html" class="text-light">Credits</a>
+          </p>
+        </div>
+        <div class="col-lg-4"></div>
+      </div>
   </body>
 </html>

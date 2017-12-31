@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Credits - BIO-IT</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/master.css">
+  </head>
+  <body class="container">
+    <div class="walk"></div>
+    <div class="card">
+      <div class="card-body">
+        <br />
+        <h3 class="text-center" style="font-family: 'Times New Roman', Times, serif;font-weight:bolder;">Biochemical Insight of Important Topics (BIO-IT)</h3>
+        <div class="walk"></div>
+        <div class="row">
+          <div class="col-lg-2"></div>
+          <div class="col-lg-8">
+            <p class=" lead">
+              BIO-IT is a web application consisting of 3 components, <strong>Titration Curves</strong>,
+              <strong>Amino Acids</strong> and <strong>Peptide Bonds</strong>.
+              Each of those components have been created with the help of tools and/or scripts from external sources.
+              The main tool that is used to create this overall website is Bootstrap<sup>1</sup>
+            </p>
+            <p class="lead">
+              <b>Titration Curves</b> are created using JavaScript's library called D3JS<sup>2</sup>, which is rendering SVG's to display the graphs and the text-values.
+              The images that are rendered for each state in a given titration curve are retrieved from PepDraw<sup>3</sup> and modified to emphasize the protonation
+              change for each stage. The information for each titration curve is stored in a JSON file which is retrieved when needed.
+            </p>
+
+            <p class="lead">
+              <b>Amino Acids</b> section of this application consists of flashcards whose functionality is based on Andrew's code<sup>4</sup> on a forum post.
+            </p>
+
+            <p class="lead">
+              <b>Peptide Bonds</b> section of this application contains two further components, a) Generating peptide bonds from a string, and b) Testing your knowledge
+              of the concepts of peptide bonds. The first component just generate the peptide sequence from the string given, with a condition that the string is valid
+              amino acids. The images are retrieved from the peptide drawing script created by PepDraw<sup>3</sup>. The second component again randomly draws a peptide
+              sequence and tests you on it.
+
+            </p>
+            <hr />
+            <p class="lead" style="font-size: 95%">
+                <sup>1</sup><a href="https://getbootstrap.com" class="text-info">Bootstrap</a> -- <i>open source toolkit for developing with HTML, CSS, and JS</i>
+                <br />
+                <sup>2</sup><a href="https://getbootstrap.com" class="text-info">D3JS</a> -- <i>D3 is a JavaScript library for visualizing data with HTML, SVG, and CSS</i>
+                <br />
+                <sup>3</sup><a href="http://pepdraw.com/" class="text-info">PepDraw</a> -- <i>A tool to draw peptide primary structure and calculate theoretical properties</i>
+                <sup>4</sup><a href="https://codereview.stackexchange.com/questions/78278/simplistic-flash-card-web-app" class="text-info">Andrew's Post</a> -- <i>Used for the flashcards</i>
+              </ol>
+            </p>
+          </div>
+          <div class="col-lg-2"> </div>
+        </div>
+      </div>
+    </div>
+    <div class="walk"></div>
+  </body>
+</html>

@@ -1,80 +1,100 @@
 [{
   "name": "Glycine",
-  "code": ["Gly", "G"]
+  "code": ["Gly", "G"],
+  "image": "../assets/flashcard-images/g.png"
 },
 {
   "name": "Alanine",
-  "code": ["Ala", "A"]
+  "code": ["Ala", "A"],
+  "image": "../assets/flashcard-images/a.png"
 },
 {
   "name": "Valine",
-  "code": ["Val", "V"]
+  "code": ["Val", "V"],
+  "image": "../assets/flashcard-images/v.png"
 },
 {
   "name": "Leucine",
-  "code": ["Leu", "L"]
+  "code": ["Leu", "L"],
+  "image": "../assets/flashcard-images/l.png"
 },
 {
   "name": "Isoleucine",
-  "code": ["Ile", "I"]
+  "code": ["Ile", "I"],
+  "image": "../assets/flashcard-images/i.png"
 },
 {
   "name": "Methionine",
-  "code": ["Met", "M"]
+  "code": ["Met", "M"],
+  "image": "../assets/flashcard-images/m.png"
 },
 {
   "name": "Proline",
-  "code": ["Pro", "P"]
+  "code": ["Pro", "P"],
+  "image": "../assets/flashcard-images/p.png"
 },
 {
   "name": "Phenylalanine",
-  "code": ["Phe", "F"]
+  "code": ["Phe", "F"],
+  "image": "../assets/flashcard-images/f.png"
 },
 {
   "name": "Tryptophan",
-  "code": ["Trp", "W"]
+  "code": ["Trp", "W"],
+  "image": "../assets/flashcard-images/w.png"
 },
 {
   "name": "Asparagine",
-  "code": ["Asn", "N"]
+  "code": ["Asn", "N"],
+  "image": "../assets/flashcard-images/n.png"
 },
 {
   "name": "glutamine",
-  "code": ["Glu","Q"]
+  "code": ["Glu","Q"],
+  "image": "../assets/flashcard-images/q.png"
 },
 {
   "name": "serine",
-  "code": ["Ser","S"]
+  "code": ["Ser","S"],
+  "image": "../assets/flashcard-images/s.png"
 },
 {
   "name": "threonine",
-  "code": ["Thr","T"]
+  "code": ["Thr","T"],
+  "image": "../assets/flashcard-images/t.png"
 },
 {
   "name": "tyrosine",
-  "code": ["Tyr","Y"]
+  "code": ["Tyr","Y"],
+  "image": "../assets/flashcard-images/y.png"
 },
 {
   "name": "cysteine",
-  "code": ["Cys","C"]
+  "code": ["Cys","C"],
+  "image": "../assets/flashcard-images/c.png"
 },
 {
   "name": "aspartate",
-  "code": ["Asp","D"]
+  "code": ["Asp","D"],
+  "image": "../assets/flashcard-images/d.png"
 },
 {
   "name": "glutamate",
-  "code": ["Glu","E"]
+  "code": ["Glu","E"],
+  "image": "../assets/flashcard-images/e.png"
 },
 {
   "name": "lysine",
-  "code": ["Lys","K"]
+  "code": ["Lys","K"],
+  "image": "../assets/flashcard-images/k.png"
 },
 {
   "name": "arginine",
-  "code": ["Arg","R"]
+  "code": ["Arg","R"],
+  "image": "../assets/flashcard-images/r.png"
 },
 {
   "name": "histidine",
-  "code": ["His","H"]
+  "code": ["His","H"],
+  "image": "../assets/flashcard-images/h.png"
 }]
