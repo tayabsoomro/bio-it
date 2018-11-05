@@ -4,8 +4,6 @@ Biochemical Insight of Important Topics (BIO-IT)
 This is a tool created for BMSC 200 (Biochemistry) students at the U of S to understand the concepts
 taught in classroom in an interactive fashion. You can checkout the tool [here](http://tayabsoomro.me/projects/bio-it/)
 
-This project is going to be presented at the Undergraduate Project Symposium hosted by USSU at
-the University of Saskatchewan.
 
 Features
 -----------
